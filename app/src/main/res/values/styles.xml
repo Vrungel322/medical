@@ -32,18 +32,18 @@
     <item name="colorControlNormal">@color/colorWhite</item>
   </style>
 
-  <style name="AppThemeGreen" parent="Theme.AppCompat.Light.DarkActionBar">
+  <style name="AppThemePink" parent="Theme.AppCompat.Light.DarkActionBar">
     <!-- Customize your theme here. -->
-    <item name="colorPrimary">@color/colorPrimaryGreen</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDarkGreen</item>
-    <item name="colorAccent">@color/colorAccentGreen</item>
+    <item name="colorPrimary">@color/colorPrimaryPink</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDarkPink</item>
+    <item name="colorAccent">@color/colorAccentPink</item>
   </style>
 
-  <style name="AppThemeNoActionBarGreen" parent="Theme.AppCompat.Light.NoActionBar">
+  <style name="AppThemeNoActionBarPink" parent="Theme.AppCompat.Light.NoActionBar">
     <!-- Customize your theme here. -->
-    <item name="colorPrimary">@color/colorPrimaryGreen</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDarkGreen</item>
-    <item name="colorAccent">@color/colorAccentGreen</item>
+    <item name="colorPrimary">@color/colorPrimaryPink</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDarkPink</item>
+    <item name="colorAccent">@color/colorAccentPink</item>
     <item name="colorControlNormal">@color/colorWhite</item>
   </style>
 

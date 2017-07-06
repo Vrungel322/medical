@@ -1,12 +1,34 @@
 <resources>
   <string name="app_name">Medical</string>
 
+  <string name="title_activity_start">Medical</string>
+
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+
+  <!-- DIALOG -->
   <string name="dialog_action_ok">OK</string>
   <string name="dialog_error_title">Ошибка</string>
-  <string name="title_activity_start">Салон</string>
-
   <string name="dialog_auth_title">Предупреждение</string>
   <string name="dialog_auth_message">Данная функция доступна только для зарегистрированных пользователей.\nПерейти на экран авторизации?</string>
   <string name="dialog_auth_yes">Перейти</string>
   <string name="dialog_auth_cancel">Отмена</string>
+  <string name="error_smth_wrong">Что-то пошло не так!</string>
+  <string name="error_connection_title">Ошибка соеденения</string>
+  <string name="error_connection_message">Проверте подключение к интернету</string>
+
+  <!-- MENU -->
+  <string name="menu_main">Главная</string>
+  <string name="menu_booking">Записаться</string>
+  <string name="menu_my_booking">Мои записи</string>
+  <string name="menu_results">Результаты и архив</string>
+  <string name="menu_prices">Цены</string>
+  <string name="menu_sales">Акции</string>
+  <string name="menu_doctors">Врачи</string>
+  <string name="menu_share">Поделиться с друзьями</string>
+  <string name="menu_news">Новости</string>
+  <string name="menu_about">О нас</string>
+  <string name="menu_settings">Настройки приложения</string>
+
+  <!-- ERRORS -->
 </resources>

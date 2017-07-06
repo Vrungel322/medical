@@ -33,9 +33,9 @@ public class Constants {
   }
 
   public class Theme {
-    public static final int PINK = 0;
+    public static final int GREEN = 0;
     public static final int BLUE = 1;
-    public static final int GREEN = 2;
+    public static final int PINK = 2;
     public static final int YELLOW = 3;
     public static final int GRAY = 4;
     public static final int PURPLE = 5;

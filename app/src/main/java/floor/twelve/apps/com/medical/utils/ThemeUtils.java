@@ -24,12 +24,12 @@ public class ThemeUtils {
     SharedPreferences preferences =
         context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
     switch (preferences.getInt(PREF_THEME_SELECTED, 0)) {
-      case PINK:
+      case GREEN:
         return R.style.AppTheme_NoActionBar;
       case BLUE:
         return R.style.AppThemeNoActionBarBlue;
-      case GREEN:
-        return R.style.AppThemeNoActionBarGreen;
+      case PINK:
+        return R.style.AppThemeNoActionBarPink;
       case YELLOW:
         return R.style.AppThemeNoActionBarYellow;
       case GRAY:
@@ -47,12 +47,12 @@ public class ThemeUtils {
     SharedPreferences preferences =
         context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
     switch (preferences.getInt(PREF_THEME_SELECTED, 0)) {
-      case PINK:
+      case GREEN:
         return R.style.AppTheme;
       case BLUE:
         return R.style.AppThemeBlue;
-      case GREEN:
-        return R.style.AppThemeGreen;
+      case PINK:
+        return R.style.AppThemePink;
       case YELLOW:
         return R.style.AppThemeYellow;
       case GRAY:

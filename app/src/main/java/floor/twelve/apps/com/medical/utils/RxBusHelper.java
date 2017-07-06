@@ -6,9 +6,27 @@ package floor.twelve.apps.com.medical.utils;
 
 public final class RxBusHelper {
 
+  public static class HideFloatingButton {
+
+  }
+
+  public static class ShowFloatingButton {
+
+  }
+
+  public static class ShowAuthDialog {
+
+  }
+
+  public static class ShowAuthDialogBooking {
+
+  }
+
   public static class MessageConnectException {
+
   }
 
   public static class MessageWrongException {
+
   }
 }

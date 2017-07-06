@@ -2,6 +2,7 @@ package floor.twelve.apps.com.medical;
 
 import android.support.multidex.MultiDexApplication;
 import com.apps.twelve.floor.authorization.AuthorizationManager;
+import com.arellomobile.mvp.RegisterMoxyReflectorPackages;
 import com.evernote.android.job.JobManager;
 import floor.twelve.apps.com.medical.di.components.AppComponent;
 import floor.twelve.apps.com.medical.di.components.DaggerAppComponent;
@@ -15,7 +16,8 @@ import timber.log.Timber;
  * Created by Alexandra on 05.07.2017.
  */
 
-public class App extends MultiDexApplication {
+@RegisterMoxyReflectorPackages({ "com.apps.twelve.floor.authorization" }) public class App
+    extends MultiDexApplication {
 
   private static AppComponent sAppComponent;
 
