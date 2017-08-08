@@ -1,4 +1,4 @@
-package com.apps.twelve.floor.salon.di.modules;
+package floor.twelve.apps.com.medical.di.modules;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
