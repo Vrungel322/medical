@@ -9,7 +9,7 @@ import android.support.v7.app.AlertDialog;
 import floor.twelve.apps.com.medical.R;
 
 /**
- * Created by Alexandra on 05.07.2017.
+ * Created by John on 26.01.2017.
  */
 
 public final class DialogFactory {
@@ -66,5 +66,15 @@ public final class DialogFactory {
     return new AlertDialog.Builder(context).setTitle(context.getString(R.string.dialog_auth_title))
         .setMessage(context.getString(R.string.dialog_auth_message));
   }
-}
 
+  public static AlertDialog.Builder createNoInternetDialogBuilder(Context context) {
+    return new AlertDialog.Builder(context).setTitle(context.getString(R.string.dialog_attention))
+        .setMessage(context.getString(R.string.dialog_no_internet_message));
+  }
+
+  public static AlertDialog.Builder createDoubleCheckinTimeDialog(Context context,
+      String allServices) {
+    return new AlertDialog.Builder(context).setTitle(context.getString(R.string.dialog_attention))
+        .setMessage(context.getString(R.string.double_checkin_time) + allServices);
+  }
+}

@@ -15,7 +15,7 @@ import static floor.twelve.apps.com.medical.utils.Constants.Theme.RED;
 import static floor.twelve.apps.com.medical.utils.Constants.Theme.YELLOW;
 
 /**
- * Created by Alexandra on 05.07.2017.
+ * Created by John on 20.05.2017.
  */
 
 public class ThemeUtils {
@@ -24,12 +24,12 @@ public class ThemeUtils {
     SharedPreferences preferences =
         context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
     switch (preferences.getInt(PREF_THEME_SELECTED, 0)) {
-      case GREEN:
+      case PINK:
         return R.style.AppTheme_NoActionBar;
       case BLUE:
         return R.style.AppThemeNoActionBarBlue;
-      case PINK:
-        return R.style.AppThemeNoActionBarPink;
+      case GREEN:
+        return R.style.AppThemeNoActionBarGreen;
       case YELLOW:
         return R.style.AppThemeNoActionBarYellow;
       case GRAY:
@@ -47,12 +47,12 @@ public class ThemeUtils {
     SharedPreferences preferences =
         context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
     switch (preferences.getInt(PREF_THEME_SELECTED, 0)) {
-      case GREEN:
+      case PINK:
         return R.style.AppTheme;
       case BLUE:
         return R.style.AppThemeBlue;
-      case PINK:
-        return R.style.AppThemePink;
+      case GREEN:
+        return R.style.AppThemeGreen;
       case YELLOW:
         return R.style.AppThemeYellow;
       case GRAY:
@@ -66,4 +66,3 @@ public class ThemeUtils {
     }
   }
 }
-

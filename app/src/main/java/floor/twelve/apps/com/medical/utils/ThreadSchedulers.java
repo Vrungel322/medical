@@ -5,7 +5,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by Alexandra on 05.07.2017.
+ * Created by John on 26.01.2017.
  */
 
 public final class ThreadSchedulers {

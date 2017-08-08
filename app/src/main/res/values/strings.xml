@@ -31,4 +31,9 @@
   <string name="menu_settings">Настройки приложения</string>
 
   <!-- ERRORS -->
+
+  <!--DIALOG-->
+  <string name="dialog_attention">Предупреждение</string>
+  <string name="dialog_no_internet_message">Данная функция доступна только при наличии Интернета.\nПерейти к настройкам сети?</string>
+  <string name="double_checkin_time">Вы пытаетесь записаться на уже занятое Вами время. Продолжить?</string>
 </resources>

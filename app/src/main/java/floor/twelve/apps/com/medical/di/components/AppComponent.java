@@ -6,6 +6,7 @@ import floor.twelve.apps.com.medical.base.BaseFragment;
 import floor.twelve.apps.com.medical.di.modules.AppModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
 import floor.twelve.apps.com.medical.feature.start_point.presenters.StartActivityPresenter;
+import floor.twelve.apps.com.medical.utils.NetworkBroadcastReceiver;
 import floor.twelve.apps.com.medical.utils.jobs.JobsCreator;
 import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
 
@@ -29,4 +30,6 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(NotificationJob notificationJob);
 
   void inject(JobsCreator jobsCreator);
+
+  void inject(NetworkBroadcastReceiver networkBroadcastReceiver);
 }

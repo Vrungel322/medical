@@ -4,7 +4,7 @@ import rx.Observable;
 import rx.subjects.PublishSubject;
 
 /**
- * Created by Alexandra on 05.07.2017.
+ * Created by John on 26.01.2017.
  */
 
 public class RxBus {

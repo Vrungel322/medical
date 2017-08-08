@@ -12,6 +12,7 @@ public class PreferencesHelper {
   public static final String PREF_FILE_NAME = "com.medical.floor";
 
   public static final String PREF_THEME_SELECTED = "PREF_THEME_SELECTED";
+  public static final String PREF_LANGUAGE_CODE = "PREF_LANGUAGE_CODE";
 
   private final SharedPreferences mPreferences;
 
@@ -23,12 +24,11 @@ public class PreferencesHelper {
     mPreferences.edit().clear().apply();
   }
 
-  public void setThemeSelected(int themeSelected) {
-    mPreferences.edit().putInt(PREF_THEME_SELECTED, themeSelected).apply();
-  }
-
   public int getThemeSelected() {
     return mPreferences.getInt(PREF_THEME_SELECTED, 0);
   }
 
+  public void setThemeSelected(int themeSelected) {
+    mPreferences.edit().putInt(PREF_THEME_SELECTED, themeSelected).apply();
+  }
 }

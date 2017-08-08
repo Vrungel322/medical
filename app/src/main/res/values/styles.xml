@@ -107,6 +107,21 @@
     <item name="colorControlNormal">@color/colorWhite</item>
   </style>
 
+  <style name="AppThemeGreen" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimaryGreen</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDarkGreen</item>
+    <item name="colorAccent">@color/colorAccentGreen</item>
+  </style>
+
+  <style name="AppThemeNoActionBarGreen" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimaryGreen</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDarkGreen</item>
+    <item name="colorAccent">@color/colorAccentGreen</item>
+    <item name="colorControlNormal">@color/colorWhite</item>
+  </style>
+
   <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat"/>

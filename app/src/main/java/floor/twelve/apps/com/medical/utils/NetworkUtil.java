@@ -6,7 +6,7 @@ import android.net.NetworkInfo;
 import retrofit2.HttpException;
 
 /**
- * Created by Alexandra on 05.07.2017.
+ * Created by John on 26.01.2017.
  */
 
 public final class NetworkUtil {

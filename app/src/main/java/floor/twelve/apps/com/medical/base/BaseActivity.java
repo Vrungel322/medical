@@ -22,7 +22,7 @@ import javax.inject.Inject;
 import static floor.twelve.apps.com.medical.R.mipmap.ic_launcher;
 
 /**
- * Created by Alexandra on 05.07.2017.
+ * Created by John on 27.01.2017.
  */
 
 public abstract class BaseActivity extends MvpAppCompatActivity {
@@ -63,6 +63,21 @@ public abstract class BaseActivity extends MvpAppCompatActivity {
 
   protected void showToastMessage(@StringRes int id) {
     Toast.makeText(mContext, id, Toast.LENGTH_SHORT).show();
+  }
+
+  protected void showLongAlertMessage(String title, String message) {
+    TypedValue value = new TypedValue();
+    getTheme().resolveAttribute(R.attr.colorAccent, value, true);
+    Alerter.create(this)
+        .setTitle(title)
+        .setText(message)
+        .enableInfiniteDuration(true)
+        .enableSwipeToDismiss()
+        .setBackgroundColor(value.resourceId)
+        .setOnClickListener(view -> {
+
+        })
+        .show();
   }
 
   public void setTitleAppBar(@StringRes int resId) {

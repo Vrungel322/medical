@@ -4,14 +4,19 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.support.design.widget.TabLayout;
+import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static floor.twelve.apps.com.medical.utils.Constants.Rotation.LANDSCAPE;
+import static floor.twelve.apps.com.medical.utils.Constants.Rotation.PORTRAIT;
+
 /**
- * Created by Alexandra on 05.07.2017.
+ * Created by John on 26.01.2017.
  */
 
 public final class ViewUtil {
@@ -44,6 +49,17 @@ public final class ViewUtil {
     return matcher.matches();
   }
 
+  public static int getRotation(Context context) {
+    final int rotation =
+        ((WindowManager) context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay()
+            .getOrientation();
+    if (rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180) {
+      return PORTRAIT;
+    } else {
+      return LANDSCAPE;
+    }
+  }
+
   public static class TabLayoutUtils {
 
     public static void enableTabs(TabLayout tabLayout, Boolean enable) {
@@ -67,4 +83,3 @@ public final class ViewUtil {
     }
   }
 }
-

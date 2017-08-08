@@ -5,7 +5,7 @@ import android.view.View;
 import floor.twelve.apps.com.medical.R;
 
 /**
- * Created by Alexandra on 05.07.2017.
+ * Created by John on 26.01.2017.
  */
 
 public final class ItemClickSupport {
@@ -94,4 +94,3 @@ public final class ItemClickSupport {
     boolean onItemLongClicked(RecyclerView recyclerView, int position, View v);
   }
 }
-

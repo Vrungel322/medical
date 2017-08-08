@@ -9,9 +9,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * Created by Alexandra on 05.07.2017.
+ * Created by Vrungel on 26.01.2017.
  */
-
 
 public class Navigator {
 
@@ -228,4 +227,3 @@ public class Navigator {
     return fragmentCopy != null;
   }
 }
-

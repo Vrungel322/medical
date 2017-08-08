@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import butterknife.BindView;
+import com.apps.twelve.floor.authorization.data.local.LocaleHelper;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.BaseActivity;
@@ -219,7 +220,8 @@ public class StartActivity extends BaseActivity
         .setNegativeButton(R.string.dialog_auth_cancel,
             (dialog, which) -> mStartActivityPresenter.cancelAlertDialog())
         .setPositiveButton(R.string.dialog_auth_yes, (dialog, which) -> {
-          mAuthorizationManager.startSignInActivity(this, ThemeUtils.getThemeActionBar(mContext));
+          mAuthorizationManager.startSignInActivity(this, ThemeUtils.getThemeActionBar(mContext),
+              LocaleHelper.getLanguage(this));
           mStartActivityPresenter.cancelAlertDialog();
         })
         .create();
@@ -234,7 +236,8 @@ public class StartActivity extends BaseActivity
   }
 
   @Override public void startSignInActivity() {
-    mAuthorizationManager.startSignInActivity(this, ThemeUtils.getThemeActionBar(this));
+    mAuthorizationManager.startSignInActivity(this, ThemeUtils.getThemeActionBar(this),
+        LocaleHelper.getLanguage(this));
   }
 
   @Override public void onDestroy() {

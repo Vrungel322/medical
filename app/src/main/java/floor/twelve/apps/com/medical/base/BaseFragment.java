@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
+import android.support.design.widget.AppBarLayout;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,20 +17,20 @@ import com.arellomobile.mvp.MvpAppCompatFragment;
 import com.tapadoo.alerter.Alerter;
 import floor.twelve.apps.com.medical.App;
 import floor.twelve.apps.com.medical.R;
+import floor.twelve.apps.com.medical.feature.start_point.activities.StartActivity;
 import javax.inject.Inject;
 
 /**
- * Created by Alexandra on 05.07.2017.
+ * Created by John on 27.01.2017.
  */
 
 public abstract class BaseFragment extends MvpAppCompatFragment {
 
+  private final int mLayoutId;
   @Inject protected Context mContext;
   @Inject protected Navigator mNavigator;
   @Inject protected AuthorizationManager mAuthorizationManager;
-
   private Unbinder mUnbinder;
-  private final int mLayoutId;
 
   public BaseFragment(int mLayoutId) {
     this.mLayoutId = mLayoutId;
@@ -45,10 +46,10 @@ public abstract class BaseFragment extends MvpAppCompatFragment {
       @Nullable Bundle savedInstanceState) {
     final View fragmentView = inflater.inflate(mLayoutId, container, false);
     mUnbinder = ButterKnife.bind(this, fragmentView);
-    //if (getActivity() instanceof StartActivity) {
-    //  AppBarLayout appBarLayout = getActivity().findViewById(R.id.appBar);
-    //  appBarLayout.setExpanded(true, false);
-    //}
+    if (getActivity() instanceof StartActivity) {
+      AppBarLayout appBarLayout = getActivity().findViewById(R.id.appBar);
+      appBarLayout.setExpanded(true, false);
+    }
     return fragmentView;
   }
 
@@ -65,6 +66,20 @@ public abstract class BaseFragment extends MvpAppCompatFragment {
         .setText(message)
         .setBackgroundColor(value.resourceId)
         .setOnClickListener(view -> {
+        }).show();
+  }
+
+  protected void showLongAlertMessage(String title, String message) {
+    TypedValue value = new TypedValue();
+    getActivity().getTheme().resolveAttribute(R.attr.colorAccent, value, true);
+    Alerter.create(getActivity())
+        .setTitle(title)
+        .setText(message)
+        .enableInfiniteDuration(true)
+        .enableSwipeToDismiss()
+        .setBackgroundColor(value.resourceId)
+        .setOnClickListener(view -> {
+
         })
         .show();
   }

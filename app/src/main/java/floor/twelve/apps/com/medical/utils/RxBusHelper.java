@@ -1,16 +1,85 @@
 package floor.twelve.apps.com.medical.utils;
 
 /**
- * Created by Alexandra on 05.07.2017.
+ * Created by John on 26.01.2017.
  */
 
 public final class RxBusHelper {
 
-  public static class HideFloatingButton {
+  public static class EventForNextStep {
+    public String fragmentTag;
 
+    public EventForNextStep(String fragmentTag) {
+      this.fragmentTag = fragmentTag;
+    }
+  }
+
+  public static class BackCategories {
+  }
+
+  public static class StateBackBookingMaster {
+  }
+
+  public static class StateBackBookingService {
+  }
+
+  public static class CloseBookingService {
+  }
+
+  public static class UpdateLastBookingListEvent {
+  }
+
+  public static class UpdateBookingDetails {
+    public String serviceTime;
+    public String scheduleId;
+
+    public UpdateBookingDetails(String serviceTime, String scheduleId) {
+      this.serviceTime = serviceTime;
+      this.scheduleId = scheduleId;
+    }
+  }
+
+  public static class UpdateNews {
+  }
+
+  public static class UpdateBonusFromChildren {
+  }
+
+  public static class UpdateBonusFromParent {
+  }
+
+  public static class UpdateBonusSwipe {
+  }
+
+  public static class StopRefreshNewsMainFragment {
+  }
+
+  public static class HideFloatingButton {
   }
 
   public static class ShowFloatingButton {
+  }
+
+  public static class SetBookingItemInMenu {
+  }
+
+  public static class SetNewsItemInMenu {
+
+  }
+
+  public static class SetBonusItemInMenu {
+
+  }
+
+  public static class UpdateOurWorkList {
+
+  }
+
+  public static class UpdateGoodsList {
+
+  }
+
+  public static class UpdateFavoriteGoodsList {
 
   }
 
@@ -23,10 +92,43 @@ public final class RxBusHelper {
   }
 
   public static class MessageConnectException {
-
   }
 
   public static class MessageWrongException {
+  }
 
+  public static class ReloadCatalogByCategory {
+    public Integer id;
+    public String title;
+
+    public ReloadCatalogByCategory(Integer id, String title) {
+      this.id = id;
+      this.title = title;
+    }
+  }
+
+  public static class NoInternetAlertDialog {
+  }
+
+  public static class NoInternetAlerter {
+  }
+
+  public static class HideSubBookingFragment {
+  }
+
+  public static class ShowSubBookingFragment {
+  }
+
+  public static class ShowResetBtn {
+  }
+
+  public static class ReloadCatalogByCategoryLocally {
+    public Integer id;
+    public String title;
+
+    public ReloadCatalogByCategoryLocally(Integer id, String title) {
+      this.id = id;
+      this.title = title;
+    }
   }
 }
