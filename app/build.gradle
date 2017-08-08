@@ -30,8 +30,8 @@ android {
     applicationId "com.apps.twelve.floor.medical"
     minSdkVersion 16
     targetSdkVersion 26
-    versionCode 42
-    versionName '1.4.2'
+    versionCode 1
+    versionName '0.0.1'
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     vectorDrawables.useSupportLibrary = true
     multiDexEnabled true
