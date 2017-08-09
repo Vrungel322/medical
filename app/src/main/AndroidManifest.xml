@@ -36,6 +36,27 @@
         android:name="android.support.PARENT_ACTIVITY"
         android:value=".feature.start_point.activities.StartActivity" />
     </activity>
+
+    <!--authorization module-->
+    <activity
+      android:name="com.apps.twelve.floor.authorization.logic.authorization.activities.ModuleSignInActivity"
+      android:launchMode="singleTask"></activity>
+    <activity
+      android:name="com.apps.twelve.floor.authorization.logic.registration.activities.ModuleRegistrationActivity"
+      android:parentActivityName="com.apps.twelve.floor.authorization.logic.authorization.activities.ModuleSignInActivity"
+      android:windowSoftInputMode="adjustResize|stateHidden">
+      <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="com.apps.twelve.floor.authorization.logic.authorization.activities.ModuleSignInActivity" />
+    </activity>
+    <activity
+      android:name="com.apps.twelve.floor.authorization.logic.recoverypassword.activities.RecoveryPasswordActivity"
+      android:parentActivityName="com.apps.twelve.floor.authorization.logic.authorization.activities.ModuleSignInActivity">
+      <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="com.apps.twelve.floor.authorization.logic.authorization.activities.ModuleSignInActivity" />
+    </activity>
+
   </application>
 
 </manifest>

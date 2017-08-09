@@ -31,4 +31,8 @@ public class PreferencesHelper {
   public void setThemeSelected(int themeSelected) {
     mPreferences.edit().putInt(PREF_THEME_SELECTED, themeSelected).apply();
   }
+
+  public void logoutUser() {
+    clear();
+  }
 }
