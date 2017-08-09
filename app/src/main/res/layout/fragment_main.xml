@@ -22,19 +22,21 @@
         <FrameLayout
             android:id="@+id/subFragmentContainerBooking"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             />
 
         <FrameLayout
             android:id="@+id/subFragmentContainerLastResults"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
+
             />
 
         <FrameLayout
             android:id="@+id/subFragmentContainerOffers"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
+            android:background="@color/black"
             />
       </LinearLayout>
 

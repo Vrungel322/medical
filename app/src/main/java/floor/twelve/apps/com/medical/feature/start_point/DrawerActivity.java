@@ -8,6 +8,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.MenuItem;
 import butterknife.BindView;
 import floor.twelve.apps.com.medical.R;
@@ -35,6 +36,7 @@ abstract public class DrawerActivity extends BaseActivity
   private void setUpUI() {
     setSupportActionBar(mToolbar);
 
+    getSupportActionBar().setTitle(Html.fromHtml("<font color='#67b3f1'>ActionBarTitle </font>"));
     mToggle =
         new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.navigation_drawer_open,
             R.string.navigation_drawer_close);

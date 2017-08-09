@@ -22,19 +22,19 @@
         android:label="@string/title_activity_start"
         android:launchMode="singleTask"
         android:theme="@style/AppTheme.NoActionBar">
-      <!--<intent-filter>-->
-        <!--<action android:name="android.intent.action.MAIN"/>-->
-
-        <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-      <!--</intent-filter>-->
-    </activity>
-    <activity android:name=".feature.start_point.activities.MainActivity322"
-        android:theme="@style/AppTheme.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
+    </activity>
+    <activity android:name=".feature.start_point.activities.MainActivity322"
+        android:theme="@style/AppTheme.NoActionBar">
+      <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN"/>-->
+
+        <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+      <!--</intent-filter>-->
     </activity>
   </application>
 

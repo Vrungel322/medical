@@ -9,34 +9,41 @@
     tools:context="floor.twelve.apps.com.medical.feature.start_point.activities.StartActivity"
     >
 
-  <android.support.design.widget.AppBarLayout
-      android:id="@+id/appBar"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:theme="@style/AppTheme.AppBarOverlay"
-      >
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:layout_scrollFlags="scroll|enterAlways"
-        app:popupTheme="@style/AppTheme.PopupOverlay"
-        app:titleTextColor="@color/colorWhite"
-        app:subtitleTextColor="@color/colorWhite"
+        android:layout_height="200dp"
+        android:background="@drawable/doctors"
         />
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0741b0fa"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp"
+        >
 
-  </android.support.design.widget.AppBarLayout>
+      <android.support.v7.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:background="#0641b0fa"
+          />
+
+    </android.support.design.widget.AppBarLayout>
+
 
   <FrameLayout
       android:id="@+id/container_main"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:layout_marginLeft="32dp"
-      android:layout_marginRight="32dp"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
       android:background="#95d4be"
-      app:behavior_overlapTop="64dp"
+      android:layout_marginTop="100dp"
       app:layout_behavior="@string/appbar_scrolling_view_behavior"
       >
 

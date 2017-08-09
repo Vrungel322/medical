@@ -9,44 +9,42 @@
     tools:context="floor.twelve.apps.com.medical.feature.start_point.activities.StartActivity"
     >
 
+
+
   <android.support.design.widget.AppBarLayout
       android:id="@+id/appBar"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:background="#0741b0fa"
+      android:fitsSystemWindows="true"
+      app:elevation="0dp"
       >
-    <android.support.design.widget.CollapsingToolbarLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:contentScrim="?attr/colorPrimary"
-        app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_scrollFlags="scroll|exitUntilCollapsed"
-        app:titleEnabled="false"
-        >
 
-      <ImageView
-          android:layout_width="match_parent"
-          android:layout_height="200dp"
-          android:background="@drawable/doctors"
-          app:layout_collapseMode="parallax"
-          />
-      <android.support.v7.widget.Toolbar
-          android:id="@+id/toolbar"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          app:layout_collapseMode="pin"
-          app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-          />
-    </android.support.design.widget.CollapsingToolbarLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0641b0fa"
+        />
+
   </android.support.design.widget.AppBarLayout>
+  <ImageView
+      android:id="@+id/imageView3"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:background="@drawable/doctors"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      />
+
 
   <FrameLayout
       android:id="@+id/container_main"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:layout_marginLeft="32dp"
-      android:layout_marginRight="32dp"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
       android:background="#95d4be"
-      app:behavior_overlapTop="64dp"
+      android:layout_marginTop="164dp"
       app:layout_behavior="@string/appbar_scrolling_view_behavior"
       >
 

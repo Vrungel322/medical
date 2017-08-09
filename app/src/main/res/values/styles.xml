@@ -130,4 +130,8 @@
     <item name="android:windowNoTitle">true</item>
   </style>
 
+  <style name="backArrowTheme" parent="AppTheme">
+    <item name="android:textColorSecondary">@color/black</item>
+  </style>
+
 </resources>
