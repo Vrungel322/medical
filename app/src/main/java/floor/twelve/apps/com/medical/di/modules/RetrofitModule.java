@@ -9,9 +9,6 @@ import floor.twelve.apps.com.medical.BuildConfig;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
 import floor.twelve.apps.com.medical.utils.Constants;
 import java.util.concurrent.TimeUnit;
-import javax.inject.Named;
-import okhttp3.Cache;
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Converter;
@@ -46,14 +43,14 @@ import timber.log.Timber;
         .create();
   }
 
-  @Provides @AppScope OkHttpClient provideOkClient(HttpLoggingInterceptor httpLoggingInterceptor,
+  @Provides @AppScope OkHttpClient provideOkClient(HttpLoggingInterceptor httpLoggingInterceptor/*,
       Cache cache, @Named("CacheInterceptor") Interceptor cacheInterceptor,
-      @Named("OfflineCacheInterceptor") Interceptor offlineCacheInterceptor) {
+      @Named("OfflineCacheInterceptor") Interceptor offlineCacheInterceptor*/) {
     return new OkHttpClient.Builder().readTimeout(10, TimeUnit.SECONDS)
         .addInterceptor(httpLoggingInterceptor)
-        .addInterceptor(offlineCacheInterceptor)
-        .addNetworkInterceptor(cacheInterceptor)
-        .cache(cache)
+        //.addInterceptor(offlineCacheInterceptor)
+        //.addNetworkInterceptor(cacheInterceptor)
+        //.cache(cache)
         .build();
   }
 
