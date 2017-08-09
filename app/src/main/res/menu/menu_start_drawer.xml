@@ -13,32 +13,32 @@
         android:title="@string/menu_booking"/>
     <item
         android:id="@+id/menu_my_booking"
-        android:icon="@drawable/ic_timetable_24dp"
+      android:icon="@drawable/ic_my_bookings"
         android:title="@string/menu_my_booking"/>
     <item
         android:id="@+id/menu_results"
-        android:icon="@drawable/ic_timetable_24dp"
+      android:icon="@drawable/ic_results_and_archive"
         android:title="@string/menu_results"/>
     <item
         android:id="@+id/menu_prices"
-        android:icon="@drawable/ic_timetable_24dp"
+      android:icon="@drawable/ic_prices"
         android:title="@string/menu_prices"/>
     <item
         android:id="@+id/menu_sales"
-        android:icon="@drawable/ic_timetable_24dp"
+      android:icon="@drawable/ic_sales"
         android:title="@string/menu_sales"/>
     <item
         android:id="@+id/menu_doctors"
-        android:icon="@drawable/ic_timetable_24dp"
+      android:icon="@drawable/ic_doctors"
         android:title="@string/menu_doctors"/>
     <item
-        android:id="@+id/menu_news"
-        android:icon="@drawable/ic_news_24dp"
-        android:title="@string/menu_news"/>
-    <item
         android:id="@+id/menu_about"
-        android:icon="@drawable/ic_news_24dp"
+      android:icon="@drawable/ic_about"
         android:title="@string/menu_about"/>
+    <item
+      android:id="@+id/menu_news"
+      android:icon="@drawable/ic_news_24dp"
+      android:title="@string/menu_news" />
   </group>
 
 </menu>
