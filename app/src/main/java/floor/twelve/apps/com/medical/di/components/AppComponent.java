@@ -5,8 +5,11 @@ import floor.twelve.apps.com.medical.base.BaseActivity;
 import floor.twelve.apps.com.medical.base.BaseFragment;
 import floor.twelve.apps.com.medical.di.modules.AppModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
+import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.start_point.presenters.StartActivityPresenter;
 import floor.twelve.apps.com.medical.utils.NetworkBroadcastReceiver;
+import floor.twelve.apps.com.medical.utils.custom_views.FabNestedScroll;
+import floor.twelve.apps.com.medical.utils.custom_views.FabRecyclerView;
 import floor.twelve.apps.com.medical.utils.jobs.JobsCreator;
 import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
 
@@ -20,6 +23,8 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
 
   void inject(StartActivityPresenter presenter);
 
+  void inject(MainFragmentPresenter presenter);
+
   //activities
   void inject(BaseActivity activity);
 
@@ -31,5 +36,11 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
 
   void inject(JobsCreator jobsCreator);
 
+  //custom views
+  void inject(FabNestedScroll scroll);
+
+  void inject(FabRecyclerView view);
+
+  //BroadcastReceivers
   void inject(NetworkBroadcastReceiver networkBroadcastReceiver);
 }

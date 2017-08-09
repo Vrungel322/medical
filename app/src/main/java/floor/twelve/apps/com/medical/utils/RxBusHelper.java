@@ -23,4 +23,10 @@ public final class RxBusHelper {
 
   public static class NoInternetAlertDialog {
   }
+
+  public static class UpdateOffers {
+  }
+
+  public static class UpdateLastResultsListEvent {
+  }
 }

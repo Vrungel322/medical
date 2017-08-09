@@ -19,8 +19,10 @@ import com.apps.twelve.floor.authorization.data.local.LocaleHelper;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.BaseActivity;
+import floor.twelve.apps.com.medical.feature.main_screen.fragments.MainFragment;
 import floor.twelve.apps.com.medical.feature.start_point.presenters.StartActivityPresenter;
 import floor.twelve.apps.com.medical.feature.start_point.views.IStartActivityView;
+import floor.twelve.apps.com.medical.utils.Constants;
 import floor.twelve.apps.com.medical.utils.DialogFactory;
 import floor.twelve.apps.com.medical.utils.ThemeUtils;
 
@@ -211,8 +213,8 @@ public class StartActivity extends BaseActivity
   }
 
   @Override public void addFragmentMain() {
-    //mNavigator.addFragmentTag(StartActivity.this, R.id.container_main, new MainFragment(),
-    //    Constants.FragmentTag.MAIN_FRAGMENT);
+    mNavigator.addFragmentTag(StartActivity.this, R.id.container_main, new MainFragment(),
+        Constants.FragmentTag.MAIN_FRAGMENT);
   }
 
   @Override public void showAlertDialog() {

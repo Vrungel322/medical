@@ -13,6 +13,10 @@ public final class Constants {
     public static final String BASE_URL = "https://" + DOMEN + "/";
   }
 
+  public class FragmentTag {
+    public static final String MAIN_FRAGMENT = "MainFragment";
+  }
+
   public class Notifications {
     public static final String LAST_BOOKING_ENTITY_ID = "LAST_BOOKING_ENTITY_ID";
     public static final String LAST_BOOKING_ENTITY = "LAST_BOOKING_ENTITY";
