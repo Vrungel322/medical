@@ -20,6 +20,7 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.BaseActivity;
 import floor.twelve.apps.com.medical.feature.main_screen.fragments.MainFragment;
+import floor.twelve.apps.com.medical.feature.settings.activities.SettingsActivity;
 import floor.twelve.apps.com.medical.feature.start_point.presenters.StartActivityPresenter;
 import floor.twelve.apps.com.medical.feature.start_point.views.IStartActivityView;
 import floor.twelve.apps.com.medical.utils.Constants;
@@ -185,8 +186,8 @@ public class StartActivity extends BaseActivity
         //    ContactsFragment.newInstance(), Constants.FragmentTag.CONTACTS_FRAGMENT);
         break;
       case R.id.nav_settings:
-        //mNavigator.startActivity(StartActivity.this,
-        //    new Intent(StartActivity.this, SettingsActivity.class));
+        mNavigator.startActivity(StartActivity.this,
+            new Intent(StartActivity.this, SettingsActivity.class));
         break;
     }
     mDrawerLayout.closeDrawer(GravityCompat.START);
