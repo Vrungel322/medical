@@ -47,4 +47,11 @@ public class DataManager {
   public <T extends RealmObject> void dropRealmTable(Class<T> clazz) {
     mDbHelper.dropRealmTable(clazz);
   }
+
+  //authorization module
+
+  public void logoutUser() {
+    mPref.logoutUser();
+    mAuthorizationManager.clear();
+  }
 }

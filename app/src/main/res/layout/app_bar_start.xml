@@ -56,7 +56,7 @@
       android:layout_height="wrap_content"
       android:layout_gravity="bottom|end"
       android:layout_margin="16dp"
-      app:srcCompat="@drawable/ic_create_booking"
+    app:srcCompat="@drawable/ic_create_booking_24dp"
       />
 
 </android.support.design.widget.CoordinatorLayout>

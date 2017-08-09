@@ -1,7 +1,7 @@
 <resources>
-  <string name="app_name">Medical</string>
+  <string name="app_name">Медцентр</string>
 
-  <string name="title_activity_start">Medical</string>
+  <string name="title_activity_start">Медцентр</string>
 
   <string name="navigation_drawer_open">Open navigation drawer</string>
   <string name="navigation_drawer_close">Close navigation drawer</string>

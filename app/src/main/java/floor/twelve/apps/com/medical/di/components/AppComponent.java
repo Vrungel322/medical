@@ -6,6 +6,8 @@ import floor.twelve.apps.com.medical.base.BaseFragment;
 import floor.twelve.apps.com.medical.di.modules.AppModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsActivityPresenter;
+import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.start_point.presenters.StartActivityPresenter;
 import floor.twelve.apps.com.medical.utils.NetworkBroadcastReceiver;
 import floor.twelve.apps.com.medical.utils.custom_views.FabNestedScroll;
@@ -30,6 +32,11 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
 
   //fragments
   void inject(BaseFragment fragment);
+
+  //presenters
+  void inject(SettingsActivityPresenter settingsActivityPresenter);
+
+  void inject(SettingsFragmentPresenter settingsFragmentPresenter);
 
   //job
   void inject(NotificationJob notificationJob);
