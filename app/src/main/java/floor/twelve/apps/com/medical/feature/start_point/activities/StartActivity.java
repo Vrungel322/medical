@@ -1,16 +1,21 @@
 package floor.twelve.apps.com.medical.feature.start_point.activities;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.res.ResourcesCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -56,7 +61,7 @@ public class StartActivity extends BaseActivity
     getSupportFragmentManager().addOnBackStackChangedListener(
         () -> mStartActivityPresenter.setDrawerIndicator());
 
-    mToggle.setToolbarNavigationClickListener(v -> onBackPressed());
+    //mToggle.setToolbarNavigationClickListener(v -> onBackPressed());
   }
 
   private void setUpUI() {
@@ -70,6 +75,21 @@ public class StartActivity extends BaseActivity
 
     mNavViewTopPart.setNavigationItemSelectedListener(this);
     mNavViewBottomPart.setNavigationItemSelectedListener(this);
+
+    // TODO: 10/08/17 if useless - remove it
+    //setUp custom open drawer layout button
+    TypedValue value = new TypedValue();
+    getTheme().resolveAttribute(R.attr.colorAccent, value, true);
+
+    Drawable drawable =
+        ResourcesCompat.getDrawable(getResources(), R.drawable.ic_hamburger_24dp, null);
+    drawable = DrawableCompat.wrap(drawable);
+    DrawableCompat.setTint(drawable, ContextCompat.getColor(this, value.resourceId));
+
+    mToggle.setDrawerIndicatorEnabled(false);
+    mToggle.setToolbarNavigationClickListener(
+        view -> mDrawerLayout.openDrawer(GravityCompat.START));
+    mToggle.setHomeAsUpIndicator(drawable);
   }
 
   @Override protected void onResume() {
