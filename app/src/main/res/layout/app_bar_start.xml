@@ -10,10 +10,26 @@
     >
 
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+
+  <android.support.design.widget.AppBarLayout
+      android:id="@+id/appBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#07f10765"
+      android:theme="@style/AppTheme.AppBarOverlay"
+      app:elevation="0dp"
+      >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        />
+
+  </android.support.design.widget.AppBarLayout>
   <FrameLayout
       android:id="@+id/container_main"
       android:layout_width="match_parent"
@@ -22,27 +38,7 @@
       app:layout_behavior="@string/appbar_scrolling_view_behavior"
       >
   </FrameLayout>
-  <android.support.design.widget.AppBarLayout
-      android:id="@+id/appBar"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="#07f10765"
-      app:elevation="0dp"
-      >
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:layout_scrollFlags="scroll|enterAlways|snap"
-        android:background="@color/colorAccent"
-        />
-
-  </android.support.design.widget.AppBarLayout>
-
-
-
-</RelativeLayout>
 
   <android.support.design.widget.FloatingActionButton
       android:id="@+id/fab_booking"
