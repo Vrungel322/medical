@@ -1,6 +1,7 @@
 package floor.twelve.apps.com.medical.feature.settings.fragments;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
@@ -18,6 +19,9 @@ import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsFragmen
 import floor.twelve.apps.com.medical.feature.settings.views.ISettingsFragment;
 import floor.twelve.apps.com.medical.feature.start_point.activities.StartActivity;
 import floor.twelve.apps.com.medical.utils.DialogFactory;
+
+import static floor.twelve.apps.com.medical.utils.Constants.Remote.PRIVACY_POLICY_URL;
+import static floor.twelve.apps.com.medical.utils.Constants.Remote.TERMS_OF_SERVICE_URL;
 
 /**
  * Created by alexandersvyatetsky on 9/08/17.
@@ -102,5 +106,26 @@ public class SettingsFragment extends BaseFragment implements ISettingsFragment 
     if (mChangeLanguageDialog != null) {
       mChangeLanguageDialog.dismiss();
     }
+  }
+
+  @OnClick(R.id.rlTermOfService) public void onRlTermOfServiceClicked() {
+    Intent i = new Intent(Intent.ACTION_VIEW);
+    i.setData(Uri.parse(TERMS_OF_SERVICE_URL));
+    startActivity(i);
+  }
+
+  @OnClick(R.id.rlPrivacyPolicy) public void onRlPrivacyPolicyClicked() {
+    Intent i = new Intent(Intent.ACTION_VIEW);
+    i.setData(Uri.parse(PRIVACY_POLICY_URL));
+    startActivity(i);
+  }
+
+  @OnClick(R.id.rlPartners) public void showPartners() {
+    showToastMessage("Наши партнеры");
+  }
+
+  @OnClick(R.id.rlAboutApplication) public void showAboutAppDialog() {
+    AboutApplicationDialog aboutApplicationDialog = new AboutApplicationDialog();
+    aboutApplicationDialog.show(getActivity().getFragmentManager(), "");
   }
 }

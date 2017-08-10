@@ -23,6 +23,7 @@
   <string name="dialog_no_internet_message">Данная функция доступна только при наличии Интернета.\nПерейти к настройкам сети?</string>
   <string name="double_checkin_time">Вы пытаетесь записаться на уже занятое Вами время. Продолжить?</string>
   <string name="dialog_title_select_theme">Выберите тему</string>
+  <string name="version">Версия %1$s</string>
 
   <!-- MENU -->
   <string name="menu_main">Главная</string>
@@ -60,6 +61,7 @@
   <string name="sent_message">Сообщение отправлено</string>
   <string name="report_problem_description">Опишите Вашу проблему:</string>
   <string name="report_problem_hint">Описание вашей проблемы</string>
+  <string name="developed_by_floor12apps">Разработано в <a href="http://floor12apps.com/">floor12apps</a></string>
 
   <!--SETTINGS LANGUAGE-->
   <string name="dialog_title_select_language">Выберите язык</string>
