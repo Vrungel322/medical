@@ -55,4 +55,9 @@ public class SettingsFragment extends BaseFragment implements ISettingsFragment 
     mNavigator.addFragmentBackStack((AppCompatActivity) getActivity(), R.id.container_settings,
         NotificationSettingsFragment.newInstance());
   }
+
+  @OnClick(R.id.rlProblem) void problems() {
+    mNavigator.addFragmentBackStack((AppCompatActivity) getActivity(), R.id.container_settings,
+        ReportProblemFragment.newInstance());
+  }
 }

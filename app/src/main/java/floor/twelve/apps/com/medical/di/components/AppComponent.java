@@ -7,6 +7,7 @@ import floor.twelve.apps.com.medical.di.modules.AppModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.NotificationSettingsFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.settings.presenters.ReportProblemFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsActivityPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.start_point.presenters.StartActivityPresenter;
@@ -40,6 +41,8 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(SettingsFragmentPresenter settingsFragmentPresenter);
 
   void inject(NotificationSettingsFragmentPresenter notificationSettingsFragmentPresenter);
+
+  void inject(ReportProblemFragmentPresenter reportProblemFragmentPresenter);
 
   //job
   void inject(NotificationJob notificationJob);

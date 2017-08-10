@@ -10,6 +10,7 @@
 
   <!-- DIALOG -->
   <string name="dialog_action_ok">OK</string>
+  <string name="cancel">Отмена</string>
   <string name="dialog_error_title">Ошибка</string>
   <string name="dialog_auth_title">Предупреждение</string>
   <string name="dialog_auth_message">Данная функция доступна только для зарегистрированных пользователей.\nПерейти на экран авторизации?</string>
@@ -37,6 +38,7 @@
 
   <!-- ERRORS -->
   <string name="wrong">Что-то пошло не так!</string>
+  <string name="empty_complaint_error">Опишите подробней вашу проблему</string>
 
   <!--SETTINGS-->
   <string name="settings_change_language">Язык приложения</string>
@@ -54,6 +56,8 @@
   <string name="settings_notifications_night">Отключать звук с %1$s до %2$s</string>
   <string name="settings_notifications_change_start">Изменить начало</string>
   <string name="settings_notifications_change_end">Изменить конец</string>
-  <string name="cancel">Отмена</string>
+  <string name="sent_message">Сообщение отправлено</string>
+  <string name="report_problem_description">Опишите Вашу проблему:</string>
+  <string name="report_problem_hint">Описание вашей проблемы</string>
 
 </resources>
