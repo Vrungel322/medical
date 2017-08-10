@@ -3,9 +3,12 @@ package floor.twelve.apps.com.medical.data;
 import com.apps.twelve.floor.authorization.AuthorizationManager;
 import floor.twelve.apps.com.medical.data.local.DbHelper;
 import floor.twelve.apps.com.medical.data.local.PreferencesHelper;
+import floor.twelve.apps.com.medical.data.remote.LastBookingEntity;
 import floor.twelve.apps.com.medical.data.remote.RestApi;
 import io.realm.RealmObject;
+import java.util.ArrayList;
 import java.util.List;
+import rx.Observable;
 
 import static floor.twelve.apps.com.medical.data.local.PreferencesHelper.PREF_NOTIF_DAILY_ENABLED;
 import static floor.twelve.apps.com.medical.data.local.PreferencesHelper.PREF_NOTIF_DAYS;
@@ -138,5 +141,20 @@ public class DataManager {
 
   public void setSelectedLanguage(String selectedLanguage) {
     mPref.setSelectedLanguage(selectedLanguage);
+  }
+
+  ///////////////////////////////////////////////////////////////////////////
+  // Mocks
+  ///////////////////////////////////////////////////////////////////////////
+  public Observable<List<LastBookingEntity>> fetchBookingEntities() {
+    List<LastBookingEntity> lastBookingEntities = new ArrayList<>();
+    for (int i = 0; i < 4; i++) {
+      lastBookingEntities.add(
+          new LastBookingEntity("МЕД. УСЛУГИ, ПЛАТНЫЕ" + i, "Маникюр, обновление" + i, "14:00 pm",
+              "Профессиональная гигиена полости рта ультразвуком", "Партизанский проспект, 48-105",
+              "Виктория Алейникова", "Ведущий специалист-стоматолог", 12,
+              "http://www.doctorwho.tv/brand/assets/old-brand/img/profile-heros/twelfth-doctor.png",1));
+    }
+    return Observable.just(lastBookingEntities);
   }
 }

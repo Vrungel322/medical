@@ -19,7 +19,7 @@ import floor.twelve.apps.com.medical.utils.RxBusHelper;
   @Override protected void onFirstViewAttach() {
     super.onFirstViewAttach();
     getViewState().addSubOffersAndLastResults();
-    getViewState().startRefreshingView();
+    //getViewState().startRefreshingView();
     //RxBus
   }
 
