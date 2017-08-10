@@ -9,8 +9,8 @@ import butterknife.BindView;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.BaseFragment;
-import floor.twelve.apps.com.medical.feature.main_screen.views.IMainFragmentView;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.main_screen.views.IMainFragmentView;
 
 /**
  * Created by Vrungel on 09.08.2017.
@@ -37,7 +37,8 @@ public class MainFragment extends BaseFragment implements IMainFragmentView {
   }
 
   @Override public void addSubOffersAndLastResults() {
-
+    mNavigator.addChildFragment(this, R.id.subFragmentContainerBooking,
+        SubBookingFragment.newInstance());
   }
 
   @Override public void stopRefreshingView() {

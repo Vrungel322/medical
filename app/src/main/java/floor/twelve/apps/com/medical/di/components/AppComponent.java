@@ -6,6 +6,8 @@ import floor.twelve.apps.com.medical.base.BaseFragment;
 import floor.twelve.apps.com.medical.di.modules.AppModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastBookingAdapterPresenter;
+import floor.twelve.apps.com.medical.feature.main_screen.presenters.SubBookingFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsActivityPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.start_point.presenters.StartActivityPresenter;
@@ -26,6 +28,10 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(StartActivityPresenter presenter);
 
   void inject(MainFragmentPresenter presenter);
+
+  void inject(SubBookingFragmentPresenter presenter);
+
+  void inject(MyLastBookingAdapterPresenter presenter);
 
   //activities
   void inject(BaseActivity activity);

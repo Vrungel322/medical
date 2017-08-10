@@ -10,13 +10,23 @@
     >
 
 
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+  <FrameLayout
+      android:id="@+id/container_main"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#95d4be"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      >
+  </FrameLayout>
   <android.support.design.widget.AppBarLayout
       android:id="@+id/appBar"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:background="#0741b0fa"
-      android:fitsSystemWindows="true"
+      android:background="#07f10765"
       app:elevation="0dp"
       >
 
@@ -24,31 +34,15 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#0641b0fa"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        android:background="@color/colorAccent"
         />
 
   </android.support.design.widget.AppBarLayout>
-  <ImageView
-      android:id="@+id/imageView3"
-      android:layout_width="match_parent"
-      android:layout_height="200dp"
-      android:background="@drawable/doctors"
-      app:layout_behavior="@string/appbar_scrolling_view_behavior"
-      />
 
 
-  <FrameLayout
-      android:id="@+id/container_main"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_marginLeft="16dp"
-      android:layout_marginRight="16dp"
-      android:background="#95d4be"
-      android:layout_marginTop="164dp"
-      app:layout_behavior="@string/appbar_scrolling_view_behavior"
-      >
 
-  </FrameLayout>
+</RelativeLayout>
 
   <android.support.design.widget.FloatingActionButton
       android:id="@+id/fab_booking"
