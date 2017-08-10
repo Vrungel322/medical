@@ -120,4 +120,14 @@ public class DataManager {
   public void setNightMode(boolean enabled) {
     mPref.setNightMode(enabled);
   }
+
+  //theme
+
+  public void setThemeSelected(int themeSelected) {
+    mPref.setThemeSelected(themeSelected);
+  }
+
+  public int getThemeSelected() {
+    return mPref.getThemeSelected();
+  }
 }

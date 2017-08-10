@@ -22,6 +22,7 @@
   <string name="dialog_attention">Предупреждение</string>
   <string name="dialog_no_internet_message">Данная функция доступна только при наличии Интернета.\nПерейти к настройкам сети?</string>
   <string name="double_checkin_time">Вы пытаетесь записаться на уже занятое Вами время. Продолжить?</string>
+  <string name="dialog_title_select_theme">Выберите тему</string>
 
   <!-- MENU -->
   <string name="menu_main">Главная</string>
@@ -59,5 +60,14 @@
   <string name="sent_message">Сообщение отправлено</string>
   <string name="report_problem_description">Опишите Вашу проблему:</string>
   <string name="report_problem_hint">Описание вашей проблемы</string>
+
+  <!--THEME COLORS-->
+  <string name="pink">Розовая</string>
+  <string name="blue">Синяя</string>
+  <string name="green">Зеленая</string>
+  <string name="yellow">Желтая</string>
+  <string name="gray">Серая</string>
+  <string name="purple">Фиолетовая</string>
+  <string name="red">Красная</string>
 
 </resources>

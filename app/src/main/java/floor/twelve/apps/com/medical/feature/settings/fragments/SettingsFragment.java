@@ -60,4 +60,10 @@ public class SettingsFragment extends BaseFragment implements ISettingsFragment 
     mNavigator.addFragmentBackStack((AppCompatActivity) getActivity(), R.id.container_settings,
         ReportProblemFragment.newInstance());
   }
+
+  @OnClick(R.id.rlTheme) void changeTheme() {
+    ThemeDialogFragment themeDialog = new ThemeDialogFragment();
+    themeDialog.show(getActivity().getFragmentManager(), "");
+    themeDialog.setCancelable(false);
+  }
 }
