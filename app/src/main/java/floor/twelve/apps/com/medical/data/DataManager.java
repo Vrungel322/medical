@@ -130,4 +130,13 @@ public class DataManager {
   public int getThemeSelected() {
     return mPref.getThemeSelected();
   }
+
+  //language
+  public String getSelectedLanguage() {
+    return mPref.getSelectedLanguage();
+  }
+
+  public void setSelectedLanguage(String selectedLanguage) {
+    mPref.setSelectedLanguage(selectedLanguage);
+  }
 }

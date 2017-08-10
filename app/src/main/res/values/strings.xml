@@ -61,6 +61,13 @@
   <string name="report_problem_description">Опишите Вашу проблему:</string>
   <string name="report_problem_hint">Описание вашей проблемы</string>
 
+  <!--SETTINGS LANGUAGE-->
+  <string name="dialog_title_select_language">Выберите язык</string>
+  <string-array name="dialog_language" translatable="false">
+    <item>Русский</item>
+    <item>Українська</item>
+  </string-array>
+
   <!--THEME COLORS-->
   <string name="pink">Розовая</string>
   <string name="blue">Синяя</string>

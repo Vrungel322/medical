@@ -3,6 +3,7 @@ package floor.twelve.apps.com.medical.data.local;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+
 /**
  * Created by Alexandra on 05.07.2017.
  */
@@ -12,6 +13,7 @@ public class PreferencesHelper {
   public static final String PREF_FILE_NAME = "com.medical.floor";
 
   public static final String PREF_THEME_SELECTED = "PREF_THEME_SELECTED";
+  public static final String PREF_LANGUAGE = "PREF_LANGUAGE";
   public static final String PREF_LANGUAGE_CODE = "PREF_LANGUAGE_CODE";
 
   //notifications
@@ -103,5 +105,21 @@ public class PreferencesHelper {
 
   public void setNightMode(boolean enabled) {
     mPreferences.edit().putBoolean(PREF_NOTIF_NIGHT_MODE, enabled).apply();
+  }
+
+  ///////////////////////////////////////////////////////////////////////////
+  // language
+  ///////////////////////////////////////////////////////////////////////////
+
+  public String getSelectedLanguage() {
+    return mPreferences.getString(PREF_LANGUAGE, "");
+  }
+
+  public void setSelectedLanguage(String selectedLanguage) {
+    mPreferences.edit().putString(PREF_LANGUAGE, selectedLanguage).apply();
+  }
+
+  public String getLanguageCode() {
+    return mPreferences.getString(PREF_LANGUAGE_CODE, "ru");
   }
 }
