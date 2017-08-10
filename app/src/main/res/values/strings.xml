@@ -18,6 +18,9 @@
   <string name="error_smth_wrong">Что-то пошло не так!</string>
   <string name="error_connection_title">Ошибка соеденения</string>
   <string name="error_connection_message">Проверте подключение к интернету</string>
+  <string name="dialog_attention">Предупреждение</string>
+  <string name="dialog_no_internet_message">Данная функция доступна только при наличии Интернета.\nПерейти к настройкам сети?</string>
+  <string name="double_checkin_time">Вы пытаетесь записаться на уже занятое Вами время. Продолжить?</string>
 
   <!-- MENU -->
   <string name="menu_main">Главная</string>
@@ -33,9 +36,24 @@
   <string name="menu_settings">Настройки приложения</string>
 
   <!-- ERRORS -->
+  <string name="wrong">Что-то пошло не так!</string>
 
-  <!--DIALOG-->
-  <string name="dialog_attention">Предупреждение</string>
-  <string name="dialog_no_internet_message">Данная функция доступна только при наличии Интернета.\nПерейти к настройкам сети?</string>
-  <string name="double_checkin_time">Вы пытаетесь записаться на уже занятое Вами время. Продолжить?</string>
+  <!--SETTINGS-->
+  <string name="settings_change_language">Язык приложения</string>
+  <string name="settings_terms_and_policy">Условия и политика</string>
+  <string name="settings_terms_of_service">Условия использования</string>
+  <string name="settings_privacy_policy">Политика конфиденциальности</string>
+  <string name="settings_information">Информация</string>
+  <string name="settings_our_partners">Наши партнеры</string>
+  <string name="settings_about_application">О приложении</string>
+  <string name="settings_notifications_title_daily">Дневное уведомление</string>
+  <string name="settings_notifications_title_hourly">Часовое уведомление</string>
+  <string name="settings_notifications_hourly">За %1$d ч. %2$d мин. до начала услуги</string>
+  <string name="settings_notifications_minutely">За %1$d мин. до начала услуги</string>
+  <string name="settings_notifications_title_night">Ночной режим</string>
+  <string name="settings_notifications_night">Отключать звук с %1$s до %2$s</string>
+  <string name="settings_notifications_change_start">Изменить начало</string>
+  <string name="settings_notifications_change_end">Изменить конец</string>
+  <string name="cancel">Отмена</string>
+
 </resources>

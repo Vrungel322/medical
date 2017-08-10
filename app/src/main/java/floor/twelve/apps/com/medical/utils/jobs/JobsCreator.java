@@ -59,6 +59,9 @@ public class JobsCreator implements JobCreator {
         .schedule();
   }
 
+  public void updateNotifications() {
+  }
+
   public void cancelJob(String tag) {
     JobManager.instance().cancelAllForTag(tag);
   }

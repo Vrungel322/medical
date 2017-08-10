@@ -14,4 +14,8 @@ import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
   @StateStrategyType(SkipStrategy.class) void addSettingsFragment();
 
   void logoutUser();
+
+  void startSignInActivity();
+
+  void showWrongMessage();
 }

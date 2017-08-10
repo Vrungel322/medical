@@ -128,6 +128,16 @@
 
   <style name="ThemeDialog" parent="android:Theme.DeviceDefault.Light.Dialog">
     <item name="android:windowNoTitle">true</item>
+    <item name="android:backgroundDimEnabled">false</item>
+  </style>
+
+  <style name="ThemeDialog_Catalog" parent="android:Theme.DeviceDefault.Light.Dialog">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:backgroundDimEnabled">true</item>
+  </style>
+
+  <style name="TimePickerDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog">
+    <item name="android:windowBackground">@android:color/transparent</item>
   </style>
 
   <style name="backArrowTheme" parent="AppTheme">
