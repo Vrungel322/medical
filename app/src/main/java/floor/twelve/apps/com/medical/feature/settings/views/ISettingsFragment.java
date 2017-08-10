@@ -12,4 +12,8 @@ import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
 @StateStrategyType(AddToEndSingleStrategy.class) public interface ISettingsFragment
     extends MvpView {
   @StateStrategyType(SkipStrategy.class) void addUserProfileFragment();
+
+  void showChangeLanguageDialog();
+
+  void closeChangeLanguageDialog();
 }

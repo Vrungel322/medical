@@ -6,16 +6,19 @@ import com.arellomobile.mvp.viewstate.strategy.SkipStrategy;
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
 
 /**
- * Created by alexandersvyatetsky on 9/08/17.
+ * Created by Alexandra on 05.05.2017.
  */
 
-@StateStrategyType(AddToEndSingleStrategy.class) public interface ISettingsActivity
+@StateStrategyType(AddToEndSingleStrategy.class) public interface IReportProblemFragmentView
     extends MvpView {
-  @StateStrategyType(SkipStrategy.class) void addSettingsFragment();
 
-  void logoutUser();
+  @StateStrategyType(SkipStrategy.class) void closeFragment();
 
-  void startSignInActivity();
+  void showAlert();
 
-  void showWrongMessage();
+  void stopAnimation();
+
+  void revertAnimation();
+
+  void openSnackBarOK();
 }

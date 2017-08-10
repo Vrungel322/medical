@@ -10,6 +10,7 @@
 
   <!-- DIALOG -->
   <string name="dialog_action_ok">OK</string>
+  <string name="cancel">Отмена</string>
   <string name="dialog_error_title">Ошибка</string>
   <string name="dialog_auth_title">Предупреждение</string>
   <string name="dialog_auth_message">Данная функция доступна только для зарегистрированных пользователей.\nПерейти на экран авторизации?</string>
@@ -18,6 +19,11 @@
   <string name="error_smth_wrong">Что-то пошло не так!</string>
   <string name="error_connection_title">Ошибка соеденения</string>
   <string name="error_connection_message">Проверте подключение к интернету</string>
+  <string name="dialog_attention">Предупреждение</string>
+  <string name="dialog_no_internet_message">Данная функция доступна только при наличии Интернета.\nПерейти к настройкам сети?</string>
+  <string name="double_checkin_time">Вы пытаетесь записаться на уже занятое Вами время. Продолжить?</string>
+  <string name="dialog_title_select_theme">Выберите тему</string>
+  <string name="version">Версия %1$s</string>
 
   <!-- MENU -->
   <string name="menu_main">Главная</string>
@@ -33,9 +39,44 @@
   <string name="menu_settings">Настройки приложения</string>
 
   <!-- ERRORS -->
+  <string name="wrong">Что-то пошло не так!</string>
+  <string name="empty_complaint_error">Опишите подробней вашу проблему</string>
 
-  <!--DIALOG-->
-  <string name="dialog_attention">Предупреждение</string>
-  <string name="dialog_no_internet_message">Данная функция доступна только при наличии Интернета.\nПерейти к настройкам сети?</string>
-  <string name="double_checkin_time">Вы пытаетесь записаться на уже занятое Вами время. Продолжить?</string>
+  <!--SETTINGS-->
+  <string name="settings_change_language">Язык приложения</string>
+  <string name="settings_terms_and_policy">Условия и политика</string>
+  <string name="settings_terms_of_service">Условия использования</string>
+  <string name="settings_privacy_policy">Политика конфиденциальности</string>
+  <string name="settings_information">Информация</string>
+  <string name="settings_our_partners">Наши партнеры</string>
+  <string name="settings_about_application">О приложении</string>
+  <string name="settings_notifications_title_daily">Дневное уведомление</string>
+  <string name="settings_notifications_title_hourly">Часовое уведомление</string>
+  <string name="settings_notifications_hourly">За %1$d ч. %2$d мин. до начала услуги</string>
+  <string name="settings_notifications_minutely">За %1$d мин. до начала услуги</string>
+  <string name="settings_notifications_title_night">Ночной режим</string>
+  <string name="settings_notifications_night">Отключать звук с %1$s до %2$s</string>
+  <string name="settings_notifications_change_start">Изменить начало</string>
+  <string name="settings_notifications_change_end">Изменить конец</string>
+  <string name="sent_message">Сообщение отправлено</string>
+  <string name="report_problem_description">Опишите Вашу проблему:</string>
+  <string name="report_problem_hint">Описание вашей проблемы</string>
+  <string name="developed_by_floor12apps">Разработано в <a href="http://floor12apps.com/">floor12apps</a></string>
+
+  <!--SETTINGS LANGUAGE-->
+  <string name="dialog_title_select_language">Выберите язык</string>
+  <string-array name="dialog_language" translatable="false">
+    <item>Русский</item>
+    <item>Українська</item>
+  </string-array>
+
+  <!--THEME COLORS-->
+  <string name="pink">Розовая</string>
+  <string name="blue">Синяя</string>
+  <string name="green">Зеленая</string>
+  <string name="yellow">Желтая</string>
+  <string name="gray">Серая</string>
+  <string name="purple">Фиолетовая</string>
+  <string name="red">Красная</string>
+
 </resources>

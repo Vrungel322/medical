@@ -6,10 +6,16 @@ import floor.twelve.apps.com.medical.base.BaseFragment;
 import floor.twelve.apps.com.medical.di.modules.AppModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.settings.fragments.AboutApplicationDialog;
+import floor.twelve.apps.com.medical.feature.settings.fragments.ThemeDialogFragment;
+import floor.twelve.apps.com.medical.feature.settings.presenters.AboutApplicationDialogPresenter;
+import floor.twelve.apps.com.medical.feature.settings.presenters.NotificationSettingsFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.settings.presenters.ReportProblemFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastBookingAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.SubBookingFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsActivityPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.settings.presenters.ThemeDialogFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.start_point.presenters.StartActivityPresenter;
 import floor.twelve.apps.com.medical.utils.NetworkBroadcastReceiver;
 import floor.twelve.apps.com.medical.utils.custom_views.FabNestedScroll;
@@ -39,10 +45,22 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   //fragments
   void inject(BaseFragment fragment);
 
+  void inject(ThemeDialogFragment themeDialogFragment);
+
+  void inject(AboutApplicationDialog aboutApplicationDialog);
+
   //presenters
   void inject(SettingsActivityPresenter settingsActivityPresenter);
 
   void inject(SettingsFragmentPresenter settingsFragmentPresenter);
+
+  void inject(NotificationSettingsFragmentPresenter notificationSettingsFragmentPresenter);
+
+  void inject(ReportProblemFragmentPresenter reportProblemFragmentPresenter);
+
+  void inject(ThemeDialogFragmentPresenter themeDialogFragmentPresenter);
+
+  void inject(AboutApplicationDialogPresenter aboutApplicationDialogPresenter);
 
   //job
   void inject(NotificationJob notificationJob);
