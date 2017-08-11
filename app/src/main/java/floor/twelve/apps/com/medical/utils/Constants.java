@@ -15,6 +15,7 @@ public final class Constants {
 
   public class FragmentTag {
     public static final String MAIN_FRAGMENT = "MainFragment";
+    public static final String RESULTS_FRAGMENT = "ResultsFragment";
   }
 
   public class Notifications {

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+
+  <android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="10dp"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.651">
+
+    <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ivStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_result" />
+
+      <TextView
+        android:id="@+id/tvResultName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:lineSpacingExtra="2.5sp"
+        android:textColor="#e65b6977"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/ivStatus"
+        app:layout_constraintLeft_toRightOf="@+id/ivStatus"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Анализ крови" />
+
+      <TextView
+        android:id="@+id/tvResultDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#a9b1b7"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tvResultName"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultName"
+        tools:text="Сдача анализа крови - " />
+
+      <TextView
+        android:id="@+id/tvResultDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/colorLightGray"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/tvResultDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultName"
+        tools:text="10.08.2017" />
+
+      <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ivNotifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:tint="?colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_date_next_24dp" />
+    </android.support.constraint.ConstraintLayout>
+  </android.support.v7.widget.CardView>
+</LinearLayout>
