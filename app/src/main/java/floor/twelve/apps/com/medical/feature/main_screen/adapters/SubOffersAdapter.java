@@ -5,9 +5,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.arellomobile.mvp.MvpDelegate;
 import com.arellomobile.mvp.presenter.InjectPresenter;
+import com.bumptech.glide.Glide;
 import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.MvpBaseRecyclerAdapter;
 import floor.twelve.apps.com.medical.base.Navigator;
@@ -48,6 +52,14 @@ public class SubOffersAdapter extends MvpBaseRecyclerAdapter<SubOffersAdapter.Su
   }
 
   @Override public void onBindViewHolder(SubOffersViewHolder holder, int position) {
+    Glide.with(mContext)
+        .load(mOffers.get(position).getLogoUri())
+        .into(holder.mImageViewOfferLogo);
+    holder.mTextViewOfferName.setText(mOffers.get(position).getOfferName());
+    holder.mTextViewvOfferDescription.setText(mOffers.get(position).getOfferDescription());
+    holder.mTextViewvNumPeoplePass.setText(mOffers.get(position).getNumPeoplePass());
+    holder.mTextViewvNumWatches.setText(mOffers.get(position).getNumWatches());
+    holder.mTextViewvNumDays.setText(mOffers.get(position).getNumDays());
 
   }
 
@@ -56,6 +68,12 @@ public class SubOffersAdapter extends MvpBaseRecyclerAdapter<SubOffersAdapter.Su
   }
 
   public static class SubOffersViewHolder extends RecyclerView.ViewHolder {
+    @BindView(R.id.ivOfferLogo) ImageView mImageViewOfferLogo;
+    @BindView(R.id.tvOfferName) TextView mTextViewOfferName;
+    @BindView(R.id.tvOfferDescription) TextView mTextViewvOfferDescription;
+    @BindView(R.id.tvNumPeoplePass) TextView mTextViewvNumPeoplePass;
+    @BindView(R.id.tvNumWatches) TextView mTextViewvNumWatches;
+    @BindView(R.id.tvNumDays) TextView mTextViewvNumDays;
 
     SubOffersViewHolder(View view) {
       super(view);

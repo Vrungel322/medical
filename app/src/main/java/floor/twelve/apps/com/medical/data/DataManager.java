@@ -4,6 +4,7 @@ import com.apps.twelve.floor.authorization.AuthorizationManager;
 import floor.twelve.apps.com.medical.data.local.DbHelper;
 import floor.twelve.apps.com.medical.data.local.PreferencesHelper;
 import floor.twelve.apps.com.medical.data.remote.LastBookingEntity;
+import floor.twelve.apps.com.medical.data.remote.OfferEntity;
 import floor.twelve.apps.com.medical.data.remote.RestApi;
 import io.realm.RealmObject;
 import java.util.ArrayList;
@@ -153,8 +154,19 @@ public class DataManager {
           new LastBookingEntity("МЕД. УСЛУГИ, ПЛАТНЫЕ" + i, "Маникюр, обновление" + i, "14:00 pm",
               "Профессиональная гигиена полости рта ультразвуком", "Партизанский проспект, 48-105",
               "Виктория Алейникова", "Ведущий специалист-стоматолог", 12,
-              "http://www.doctorwho.tv/brand/assets/old-brand/img/profile-heros/twelfth-doctor.png",1));
+              "http://www.doctorwho.tv/brand/assets/old-brand/img/profile-heros/twelfth-doctor.png",
+              1));
     }
     return Observable.just(lastBookingEntities);
+  }
+
+  public Observable<List<OfferEntity>> fetchOfferEntities() {
+    List<OfferEntity> offerEntities = new ArrayList<>();
+    for (int i = 0; i < 10; i++) {
+      offerEntities.add(
+          new OfferEntity("http://lady1.net/images/%D1%80%D0%B8%D1%81.3_3.jpg", "УЗИ Ультразвуковое (соногарфия) исследование" + i,
+              "Исследование организма человека" + i, "961", "2547", "25 days"));
+    }
+    return Observable.just(offerEntities);
   }
 }

@@ -9,9 +9,11 @@ import butterknife.BindView;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.BaseFragment;
+import floor.twelve.apps.com.medical.data.remote.OfferEntity;
 import floor.twelve.apps.com.medical.feature.main_screen.adapters.SubOffersAdapter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.SubOffersFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.views.ISubOffersFragmentView;
+import java.util.List;
 
 /**
  * Created by Vrungel on 11.08.2017.
@@ -41,5 +43,9 @@ public class SubOffersFragment extends BaseFragment implements ISubOffersFragmen
     mRecyclerViewOffers.setAdapter(mSubOffersAdapter);
     mRecyclerViewOffers.setNestedScrollingEnabled(false);
     mRecyclerViewOffers.setFocusable(false);
+  }
+
+  @Override public void showOffers(List<OfferEntity> offerEntities) {
+    mSubOffersAdapter.addOffersEntity(offerEntities);
   }
 }
