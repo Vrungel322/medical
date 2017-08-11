@@ -7,15 +7,29 @@
   android:clickable="true"
   android:orientation="vertical">
 
+  <TextView
+    android:id="@+id/tvLastResults"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:fontFamily="sans-serif-medium"
+    android:text="Мои последние результаты"
+    android:textColor="#5b6977"
+    android:textSize="20sp"
+    android:textStyle="normal"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
   <android.support.v7.widget.RecyclerView
     android:id="@+id/rvResults"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp"
     android:layout_marginEnd="8dp"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
     android:layout_marginStart="8dp"
     app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent" />
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tvLastResults" />
 </android.support.constraint.ConstraintLayout>

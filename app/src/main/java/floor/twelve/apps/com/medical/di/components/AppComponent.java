@@ -7,7 +7,9 @@ import floor.twelve.apps.com.medical.di.modules.AppModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastBookingAdapterPresenter;
+import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastResultsAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.SubBookingFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.main_screen.presenters.SubResultsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.results.presenters.ResultsAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.results.presenters.ResultsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.fragments.AboutApplicationDialog;
@@ -51,6 +53,8 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
 
   void inject(AboutApplicationDialog aboutApplicationDialog);
 
+  void inject(SubResultsFragmentPresenter subResultsFragmentPresenter);
+
   //presenters
   void inject(SettingsActivityPresenter settingsActivityPresenter);
 
@@ -67,6 +71,8 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(ResultsFragmentPresenter resultsFragmentPresenter);
 
   void inject(ResultsAdapterPresenter resultsAdapterPresenter);
+
+  void inject(MyLastResultsAdapterPresenter myLastResultsAdapterPresenter);
 
   //job
   void inject(NotificationJob notificationJob);

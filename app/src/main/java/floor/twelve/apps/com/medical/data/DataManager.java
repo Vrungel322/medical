@@ -163,11 +163,21 @@ public class DataManager {
     List<ResultEntity> resultEntities = new ArrayList<>();
 
     resultEntities.add(new ResultEntity("1", "Анализ крови", "Сдача анализа крови", "14.02.2017"));
+    resultEntities.add(new ResultEntity("2", "Анализ кала", "Сдача анализа кала", "15.02.2017"));
+    resultEntities.add(new ResultEntity("3", "Анализ мочи", "Сдача анализа мочи", "16.02.2017"));
+    resultEntities.add(new ResultEntity("4", "Обледование", "Дата обследования", "17.02.2017"));
+    resultEntities.add(new ResultEntity("5", "МРТ", "Дата обследования", "18.02.2017"));
+    resultEntities.add(new ResultEntity("6", "Узи", "Дата обследования", "19.02.2017"));
+
+    return Observable.just(resultEntities);
+  }
+
+  public Observable<List<ResultEntity>> fetchLastResultEntities() {
+    List<ResultEntity> resultEntities = new ArrayList<>();
+
     resultEntities.add(new ResultEntity("1", "Анализ кала", "Сдача анализа кала", "15.02.2017"));
-    resultEntities.add(new ResultEntity("1", "Анализ мочи", "Сдача анализа мочи", "16.02.2017"));
-    resultEntities.add(new ResultEntity("1", "Обледование", "Дата обследования", "17.02.2017"));
-    resultEntities.add(new ResultEntity("1", "МРТ", "Дата обследования", "18.02.2017"));
-    resultEntities.add(new ResultEntity("1", "Узи", "Дата обследования", "19.02.2017"));
+    resultEntities.add(new ResultEntity("2", "МРТ", "Дата обследования", "18.02.2017"));
+    resultEntities.add(new ResultEntity("3", "Узи", "Дата обследования", "19.02.2017"));
 
     return Observable.just(resultEntities);
   }
