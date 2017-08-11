@@ -39,6 +39,8 @@ public class MainFragment extends BaseFragment implements IMainFragmentView {
   @Override public void addSubOffersAndLastResults() {
     mNavigator.addChildFragment(this, R.id.subFragmentContainerBooking,
         SubBookingFragment.newInstance());
+    mNavigator.addChildFragment(this, R.id.subFragmentContainerLastResults,
+        SubResultsFragment.newInstance());
     mNavigator.addChildFragment(this, R.id.subFragmentContainerOffers,
         SubOffersFragment.newInstance());
   }
