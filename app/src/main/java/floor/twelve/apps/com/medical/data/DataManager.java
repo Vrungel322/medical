@@ -3,6 +3,7 @@ package floor.twelve.apps.com.medical.data;
 import com.apps.twelve.floor.authorization.AuthorizationManager;
 import floor.twelve.apps.com.medical.data.local.DbHelper;
 import floor.twelve.apps.com.medical.data.local.PreferencesHelper;
+import floor.twelve.apps.com.medical.data.model.ResultEntity;
 import floor.twelve.apps.com.medical.data.remote.LastBookingEntity;
 import floor.twelve.apps.com.medical.data.remote.RestApi;
 import io.realm.RealmObject;
@@ -156,5 +157,18 @@ public class DataManager {
               "http://www.doctorwho.tv/brand/assets/old-brand/img/profile-heros/twelfth-doctor.png",1));
     }
     return Observable.just(lastBookingEntities);
+  }
+
+  public Observable<List<ResultEntity>> fetchResultEntities() {
+    List<ResultEntity> resultEntities = new ArrayList<>();
+
+    resultEntities.add(new ResultEntity("1", "Анализ крови", "Сдача анализа крови", "14.02.2017"));
+    resultEntities.add(new ResultEntity("1", "Анализ кала", "Сдача анализа кала", "15.02.2017"));
+    resultEntities.add(new ResultEntity("1", "Анализ мочи", "Сдача анализа мочи", "16.02.2017"));
+    resultEntities.add(new ResultEntity("1", "Обледование", "Дата обследования", "17.02.2017"));
+    resultEntities.add(new ResultEntity("1", "МРТ", "Дата обследования", "18.02.2017"));
+    resultEntities.add(new ResultEntity("1", "Узи", "Дата обследования", "19.02.2017"));
+
+    return Observable.just(resultEntities);
   }
 }

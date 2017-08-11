@@ -6,13 +6,15 @@ import floor.twelve.apps.com.medical.base.BaseFragment;
 import floor.twelve.apps.com.medical.di.modules.AppModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastBookingAdapterPresenter;
+import floor.twelve.apps.com.medical.feature.main_screen.presenters.SubBookingFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.results.presenters.ResultsAdapterPresenter;
+import floor.twelve.apps.com.medical.feature.results.presenters.ResultsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.fragments.AboutApplicationDialog;
 import floor.twelve.apps.com.medical.feature.settings.fragments.ThemeDialogFragment;
 import floor.twelve.apps.com.medical.feature.settings.presenters.AboutApplicationDialogPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.NotificationSettingsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.ReportProblemFragmentPresenter;
-import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastBookingAdapterPresenter;
-import floor.twelve.apps.com.medical.feature.main_screen.presenters.SubBookingFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsActivityPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.ThemeDialogFragmentPresenter;
@@ -61,6 +63,10 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(ThemeDialogFragmentPresenter themeDialogFragmentPresenter);
 
   void inject(AboutApplicationDialogPresenter aboutApplicationDialogPresenter);
+
+  void inject(ResultsFragmentPresenter resultsFragmentPresenter);
+
+  void inject(ResultsAdapterPresenter resultsAdapterPresenter);
 
   //job
   void inject(NotificationJob notificationJob);

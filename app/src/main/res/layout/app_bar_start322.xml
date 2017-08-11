@@ -15,9 +15,10 @@
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/doctors"
+      android:background="@drawable/main_screen"
         />
-    <android.support.design.widget.AppBarLayout
+
+  <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
