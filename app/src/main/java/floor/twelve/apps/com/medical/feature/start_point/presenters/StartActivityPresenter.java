@@ -37,7 +37,11 @@ import timber.log.Timber;
   }
 
   private void subscribeOnEvents() {
-    Subscription subscription = mRxBus.filteredObservable(RxBusHelper.HideFloatingButton.class)
+    Subscription subscription = mRxBus.filteredObservable(RxBusHelper.SetBookingItemInMenu.class)
+        .compose(ThreadSchedulers.applySchedulers())
+        .subscribe(event -> getViewState().setMyBooksItemInMenu(), Timber::e);
+    addToUnsubscription(subscription);
+    subscription = mRxBus.filteredObservable(RxBusHelper.HideFloatingButton.class)
         .compose(ThreadSchedulers.applySchedulers())
         .subscribe((event -> getViewState().hideFloatingButton()), Timber::e);
     addToUnsubscription(subscription);

@@ -29,4 +29,10 @@ public final class RxBusHelper {
 
   public static class UpdateLastResultsListEvent {
   }
+
+  public static class SetBookingItemInMenu {
+  }
+
+  public class UpdateLastBookingListEvent {
+  }
 }

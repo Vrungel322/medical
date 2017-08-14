@@ -16,6 +16,7 @@ public final class Constants {
   public class FragmentTag {
     public static final String MAIN_FRAGMENT = "MainFragment";
     public static final String RESULTS_FRAGMENT = "ResultsFragment";
+    public static final String MY_BOOK_FRAGMENT = "MyBookFragment";
   }
 
   public class Notifications {

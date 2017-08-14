@@ -78,5 +78,7 @@
   <string name="gray">Серая</string>
   <string name="purple">Фиолетовая</string>
   <string name="red">Красная</string>
+  <string name="list_is_empty">Список пуст</string>
+  <string name="server_error">Сервер отдыхает.</string>
 
 </resources>

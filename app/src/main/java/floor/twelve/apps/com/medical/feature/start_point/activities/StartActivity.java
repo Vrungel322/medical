@@ -20,6 +20,7 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.BaseActivity;
 import floor.twelve.apps.com.medical.feature.main_screen.fragments.MainFragment;
+import floor.twelve.apps.com.medical.feature.my_booking.MyBookFragment;
 import floor.twelve.apps.com.medical.feature.results.fragments.ResultsFragment;
 import floor.twelve.apps.com.medical.feature.settings.activities.SettingsActivity;
 import floor.twelve.apps.com.medical.feature.start_point.presenters.StartActivityPresenter;
@@ -166,8 +167,8 @@ public class StartActivity extends BaseActivity
         break;
       case R.id.menu_my_booking:
         if (mAuthorizationManager.isAuthorized()) {
-          //mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
-          //    MyBookFragment.newInstance(), Constants.FragmentTag.MY_BOOK_FRAGMENT);
+          mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
+              MyBookFragment.newInstance(), Constants.FragmentTag.MY_BOOK_FRAGMENT);
         } else {
           mStartActivityPresenter.showAlertDialog();
         }
@@ -256,6 +257,10 @@ public class StartActivity extends BaseActivity
   @Override public void startSignInActivity() {
     mAuthorizationManager.startSignInActivity(this, ThemeUtils.getThemeActionBar(this),
         LocaleHelper.getLanguage(this));
+  }
+
+  @Override public void setMyBooksItemInMenu() {
+    mNavViewTopPart.getMenu().getItem(2).setChecked(true);
   }
 
   @Override public void onDestroy() {
