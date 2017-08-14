@@ -115,11 +115,11 @@ public class StartActivity extends BaseActivity
   }
 
   @Override public void hideFloatingButton() {
-    mFabBooking.setVisibility(View.INVISIBLE);
+    mFabBooking.hide();
   }
 
   @Override public void showFloatingButton() {
-    mFabBooking.setVisibility(View.VISIBLE);
+    mFabBooking.show();
   }
 
   @Override public void onBackPressed() {
