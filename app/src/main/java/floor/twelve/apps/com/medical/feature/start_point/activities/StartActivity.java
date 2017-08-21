@@ -13,7 +13,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import butterknife.BindView;
 import com.apps.twelve.floor.authorization.data.local.LocaleHelper;
 import com.arellomobile.mvp.presenter.InjectPresenter;
@@ -21,6 +20,7 @@ import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.BaseActivity;
 import floor.twelve.apps.com.medical.feature.main_screen.fragments.MainFragment;
 import floor.twelve.apps.com.medical.feature.my_booking.MyBookFragment;
+import floor.twelve.apps.com.medical.feature.news.fragments.AllNewsViewFragment;
 import floor.twelve.apps.com.medical.feature.results.fragments.ResultsFragment;
 import floor.twelve.apps.com.medical.feature.settings.activities.SettingsActivity;
 import floor.twelve.apps.com.medical.feature.start_point.presenters.StartActivityPresenter;
@@ -194,8 +194,8 @@ public class StartActivity extends BaseActivity
         //    AllNewsViewFragment.newInstance(), Constants.FragmentTag.ALL_NEWS_FRAGMENT);
         break;
       case R.id.menu_news:
-        //mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
-        //    ContactsFragment.newInstance(), Constants.FragmentTag.CONTACTS_FRAGMENT);
+        mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
+            AllNewsViewFragment.newInstance(), Constants.FragmentTag.ALL_NEWS_FRAGMENT);
         break;
       case R.id.menu_about:
         //mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,

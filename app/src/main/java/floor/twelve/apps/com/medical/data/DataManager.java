@@ -3,6 +3,8 @@ package floor.twelve.apps.com.medical.data;
 import com.apps.twelve.floor.authorization.AuthorizationManager;
 import floor.twelve.apps.com.medical.data.local.DbHelper;
 import floor.twelve.apps.com.medical.data.local.PreferencesHelper;
+import floor.twelve.apps.com.medical.data.model.NewsEntity;
+import floor.twelve.apps.com.medical.data.model.PartnerEntity;
 import floor.twelve.apps.com.medical.data.model.ResultEntity;
 import floor.twelve.apps.com.medical.data.remote.LastBookingEntity;
 import floor.twelve.apps.com.medical.data.remote.OfferEntity;
@@ -10,6 +12,7 @@ import floor.twelve.apps.com.medical.data.remote.RestApi;
 import io.realm.RealmObject;
 import java.util.ArrayList;
 import java.util.List;
+import retrofit2.Response;
 import rx.Observable;
 
 import static floor.twelve.apps.com.medical.data.local.PreferencesHelper.PREF_NOTIF_DAILY_ENABLED;
@@ -37,6 +40,11 @@ public class DataManager {
     this.mPref = preferencesHelper;
     this.mAuthorizationManager = authorizationManager;
     this.mDbHelper = dbHelper;
+  }
+
+  //News
+  public Observable<Response<List<NewsEntity>>> fetchAllNews() {
+    return mRestApi.fetchAllNews(mPref.getLanguageCode());
   }
 
   //db
@@ -192,5 +200,31 @@ public class DataManager {
     resultEntities.add(new ResultEntity("3", "Узи", "Дата обследования", "19.02.2017"));
 
     return Observable.just(resultEntities);
+  }
+
+  public Observable<List<PartnerEntity>> fetchListOfPartners() {
+    ArrayList<PartnerEntity> partnerEntities = new ArrayList<>();
+
+    ArrayList<String> addresses = new ArrayList<>();
+    addresses.add("620 Eighth Avenue New York, NY 10018");
+
+    ArrayList<String> phones = new ArrayList<>();
+    phones.add("+380551234455");
+    phones.add("+380551234456");
+
+    ArrayList<String> emails = new ArrayList<>();
+    emails.add("floor12@gmail.com");
+
+    ArrayList<String> links = new ArrayList<>();
+    links.add("https://www.floor12apps.com");
+    links.add("https://www.floor12apps.com");
+
+    partnerEntities.add(new PartnerEntity("1", "Партнер1", addresses, phones, emails, links));
+    partnerEntities.add(new PartnerEntity("2", "Партнер2", addresses, phones, emails, links));
+    partnerEntities.add(new PartnerEntity("3", "Партнер3", addresses, phones, emails, links));
+    partnerEntities.add(new PartnerEntity("4", "Партнер4", addresses, phones, emails, links));
+    partnerEntities.add(new PartnerEntity("5", "Партнер5", addresses, phones, emails, links));
+
+    return Observable.just(partnerEntities);
   }
 }

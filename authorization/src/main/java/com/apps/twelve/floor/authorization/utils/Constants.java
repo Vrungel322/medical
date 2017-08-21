@@ -46,8 +46,11 @@ public final class Constants {
   }
 
   public class FragmentsArgumentKeys {
+    public static final String POSITION = "POSITION";
     public static final String CHANGING_FIELD = "CHANGING_FIELD";
     public static final String CHANGING_FIELD_VALUE = "CHANGING_FIELD_VALUE";
+    public static final String NEWS_DETAIL_KEY = "NEWS_DETAIL_KEY";
+    public static final String ALL_NEWS_DETAIL_KEY = "ALL_NEWS_DETAIL_KEY";
   }
 
   public class ChangingUserInfoField {

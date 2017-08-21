@@ -121,7 +121,8 @@ public class SettingsFragment extends BaseFragment implements ISettingsFragment 
   }
 
   @OnClick(R.id.rlPartners) public void showPartners() {
-    showToastMessage("Наши партнеры");
+    mNavigator.addFragmentBackStack((AppCompatActivity) getActivity(), R.id.container_settings,
+        PartnersFragment.newInstance());
   }
 
   @OnClick(R.id.rlAboutApplication) public void showAboutAppDialog() {

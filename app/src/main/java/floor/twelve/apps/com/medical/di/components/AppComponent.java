@@ -13,12 +13,17 @@ import floor.twelve.apps.com.medical.feature.main_screen.presenters.SubOffersAda
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.SubOffersFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.SubResultsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.my_booking.MyBookFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.news.presenters.AllNewsFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.news.presenters.DetailNewsFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.news.presenters.ListNewsDetailPresenter;
 import floor.twelve.apps.com.medical.feature.results.presenters.ResultsAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.results.presenters.ResultsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.fragments.AboutApplicationDialog;
 import floor.twelve.apps.com.medical.feature.settings.fragments.ThemeDialogFragment;
 import floor.twelve.apps.com.medical.feature.settings.presenters.AboutApplicationDialogPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.NotificationSettingsFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.settings.presenters.PartnersAdapterPresenter;
+import floor.twelve.apps.com.medical.feature.settings.presenters.PartnersFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.ReportProblemFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsActivityPresenter;
 import floor.twelve.apps.com.medical.feature.settings.presenters.SettingsFragmentPresenter;
@@ -82,6 +87,16 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(ResultsAdapterPresenter resultsAdapterPresenter);
 
   void inject(MyLastResultsAdapterPresenter myLastResultsAdapterPresenter);
+
+  void inject(PartnersAdapterPresenter partnersAdapterPresenter);
+
+  void inject(PartnersFragmentPresenter partnersFragmentPresenter);
+
+  void inject(AllNewsFragmentPresenter allNewsFragmentPresenter);
+
+  void inject(DetailNewsFragmentPresenter detailNewsFragmentPresenter);
+
+  void inject(ListNewsDetailPresenter listNewsDetailPresenter);
 
   //job
   void inject(NotificationJob notificationJob);
