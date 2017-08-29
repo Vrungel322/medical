@@ -16,6 +16,7 @@ import floor.twelve.apps.com.medical.feature.my_booking.MyBookFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.news.presenters.AllNewsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.news.presenters.DetailNewsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.news.presenters.ListNewsDetailPresenter;
+import floor.twelve.apps.com.medical.feature.offers.presenters.AllSalesFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.results.presenters.ResultsAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.results.presenters.ResultsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.fragments.AboutApplicationDialog;
@@ -56,6 +57,8 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(SubOffersAdapterPresenter presenter);
 
   void inject(MyBookFragmentPresenter presenter);
+
+  void inject(AllSalesFragmentPresenter presenter);
 
   //activities
   void inject(BaseActivity activity);

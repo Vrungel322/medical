@@ -18,6 +18,7 @@ public final class Constants {
     public static final String RESULTS_FRAGMENT = "ResultsFragment";
     public static final String MY_BOOK_FRAGMENT = "MyBookFragment";
     public static final String ALL_NEWS_FRAGMENT = "AllNewsFragment";
+    public static final String SALES_FRAGMENT = "SALES_FRAGMENT";
   }
 
   public class Notifications {

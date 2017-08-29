@@ -21,6 +21,7 @@ import floor.twelve.apps.com.medical.base.BaseActivity;
 import floor.twelve.apps.com.medical.feature.main_screen.fragments.MainFragment;
 import floor.twelve.apps.com.medical.feature.my_booking.MyBookFragment;
 import floor.twelve.apps.com.medical.feature.news.fragments.AllNewsViewFragment;
+import floor.twelve.apps.com.medical.feature.offers.fragmnets.SalesFragment;
 import floor.twelve.apps.com.medical.feature.results.fragments.ResultsFragment;
 import floor.twelve.apps.com.medical.feature.settings.activities.SettingsActivity;
 import floor.twelve.apps.com.medical.feature.start_point.presenters.StartActivityPresenter;
@@ -186,8 +187,8 @@ public class StartActivity extends BaseActivity
         //    OurWorkFragment.newInstance(), Constants.FragmentTag.OUR_WORK_FRAGMENT);
         break;
       case R.id.menu_sales:
-        //mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
-        //    CatalogFragment.newInstance(), Constants.FragmentTag.CATALOG_FRAGMENT);
+        mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
+            SalesFragment.newInstance(), Constants.FragmentTag.SALES_FRAGMENT);
         break;
       case R.id.menu_doctors:
         //mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,

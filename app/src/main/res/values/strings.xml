@@ -82,4 +82,10 @@
   <string name="server_error">Сервер отдыхает.</string>
   <string name="read_more">Подробней</string>
 
+  <!-- Sales types -->
+  <string-array name="sales_types" translatable="true">
+    <item>Все акции</item>
+    <item>Популярные</item>
+  </string-array>
+
 </resources>
