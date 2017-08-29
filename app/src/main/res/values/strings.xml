@@ -80,5 +80,6 @@
   <string name="red">Красная</string>
   <string name="list_is_empty">Список пуст</string>
   <string name="server_error">Сервер отдыхает.</string>
+  <string name="read_more">Подробней</string>
 
 </resources>
