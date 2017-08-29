@@ -6,6 +6,7 @@ import floor.twelve.apps.com.medical.data.local.PreferencesHelper;
 import floor.twelve.apps.com.medical.data.model.NewsEntity;
 import floor.twelve.apps.com.medical.data.model.PartnerEntity;
 import floor.twelve.apps.com.medical.data.model.ResultEntity;
+import floor.twelve.apps.com.medical.data.model.SalesEntity;
 import floor.twelve.apps.com.medical.data.remote.LastBookingEntity;
 import floor.twelve.apps.com.medical.data.remote.OfferEntity;
 import floor.twelve.apps.com.medical.data.remote.RestApi;
@@ -226,5 +227,15 @@ public class DataManager {
     partnerEntities.add(new PartnerEntity("5", "Партнер5", addresses, phones, emails, links));
 
     return Observable.just(partnerEntities);
+  }
+
+  public Observable<List<SalesEntity>> fetchSales() {
+    List<SalesEntity> list = new ArrayList<>();
+    for (int i = 0; i < 10; i++) {
+      list.add(new SalesEntity("УЗИ Ультразвуковое (соногарфиЯ) исследование" + i, "30 июня в 15:00",
+          "http://www.omagg.com/wp-content/uploads/2017/07/doctor_467179149-56b08aaf3df78cf772cf9262.jpg",
+          "25 days", "252", "1921"));
+    }
+    return Observable.just(list);
   }
 }

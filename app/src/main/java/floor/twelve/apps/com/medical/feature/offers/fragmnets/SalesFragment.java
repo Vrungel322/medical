@@ -22,7 +22,7 @@ public class SalesFragment extends BaseFragment implements ISalesFragmentView {
   @BindView(R.id.tabLayout) TabLayout mTabLayout;
 
   public SalesFragment() {
-    super(R.layout.sales_fragment);
+    super(R.layout.fragment_sales);
   }
 
   public static SalesFragment newInstance() {
