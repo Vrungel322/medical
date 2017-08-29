@@ -5,6 +5,7 @@ import floor.twelve.apps.com.medical.data.local.DbHelper;
 import floor.twelve.apps.com.medical.data.local.PreferencesHelper;
 import floor.twelve.apps.com.medical.data.model.NewsEntity;
 import floor.twelve.apps.com.medical.data.model.PartnerEntity;
+import floor.twelve.apps.com.medical.data.model.PricesCategoryEntity;
 import floor.twelve.apps.com.medical.data.model.ResultEntity;
 import floor.twelve.apps.com.medical.data.model.SalesEntity;
 import floor.twelve.apps.com.medical.data.remote.LastBookingEntity;
@@ -236,6 +237,20 @@ public class DataManager {
           "http://www.omagg.com/wp-content/uploads/2017/07/doctor_467179149-56b08aaf3df78cf772cf9262.jpg",
           "25 days", "252", "1921"));
     }
+    return Observable.just(list);
+  }
+
+  public Observable<List<PricesCategoryEntity>> fetchListOfPricesCategories() {
+    ArrayList<PricesCategoryEntity> list = new ArrayList<>();
+
+    list.add(new PricesCategoryEntity("1", "Лазерная пластическая хирургия"));
+    list.add(new PricesCategoryEntity("2", "Пластическая хирургия"));
+    list.add(new PricesCategoryEntity("3", "Маммопластика"));
+    list.add(new PricesCategoryEntity("4", "Лазерная дерматология"));
+    list.add(new PricesCategoryEntity("5", "Лазерное омоложение кожи лица"));
+    list.add(new PricesCategoryEntity("6", "Лазерная эпиляция"));
+    list.add(new PricesCategoryEntity("7", "Инъекции"));
+
     return Observable.just(list);
   }
 }

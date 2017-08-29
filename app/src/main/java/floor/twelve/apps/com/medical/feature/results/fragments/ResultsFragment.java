@@ -45,7 +45,6 @@ public class ResultsFragment extends BaseFragment implements IResultsFragment {
     mResultsAdapter = new ResultsAdapter(getMvpDelegate(), getContext(), mNavigator);
     mRvResults.setLayoutManager(new LinearLayoutManager(getContext()));
     mRvResults.setAdapter(mResultsAdapter);
-    mRvResults.setNestedScrollingEnabled(false);
     mRvResults.setFocusable(false);
   }
 
