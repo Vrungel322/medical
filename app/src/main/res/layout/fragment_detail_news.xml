@@ -3,9 +3,8 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:paddingBottom="16dp"
   android:background="#f5f8fc"
-  android:fillViewport="true">
+  android:paddingBottom="16dp">
 
   <android.support.v7.widget.CardView
     android:layout_width="match_parent"
@@ -25,6 +24,20 @@
         android:scaleType="centerCrop" />
 
       <TextView
+        android:id="@+id/tvNewsDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="30 июня в 15:00"
+        android:textColor="#d9a3a8b1"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:layout_below="@+id/imageViewPhotoNews"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp" />
+
+      <TextView
         android:id="@+id/textViewTitleNews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +45,7 @@
         android:fontFamily="sans-serif-medium"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
-        android:paddingTop="12dp"
+        android:paddingTop="40dp"
         android:textColor="@color/colorGray"
         android:textSize="18sp"
         tools:text="Good news" />
@@ -50,7 +63,7 @@
         android:paddingBottom="12dp"
         android:paddingTop="8dp"
         android:textColor="@color/colorTransparentBlack"
-        android:textSize="20sp"
+        android:textSize="14sp"
         tools:text="Описание новости" />
     </RelativeLayout>
 
