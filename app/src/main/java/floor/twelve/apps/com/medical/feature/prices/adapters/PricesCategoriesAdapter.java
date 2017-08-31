@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -13,7 +14,7 @@ import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.MvpBaseRecyclerAdapter;
 import floor.twelve.apps.com.medical.data.model.PricesCategoryEntity;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesAdapterPresenter;
-import floor.twelve.apps.com.medical.feature.prices.views.IPricesCategoriesAdapterPresenter;
+import floor.twelve.apps.com.medical.feature.prices.views.IPricesCategoriesAdapterView;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +24,7 @@ import java.util.List;
 
 public class PricesCategoriesAdapter
     extends MvpBaseRecyclerAdapter<PricesCategoriesAdapter.PricesCategoriesViewHolder>
-    implements IPricesCategoriesAdapterPresenter {
+    implements IPricesCategoriesAdapterView {
 
   @InjectPresenter PricesCategoriesAdapterPresenter mPresenter;
 
@@ -46,6 +47,7 @@ public class PricesCategoriesAdapter
 
   @Override public void onBindViewHolder(PricesCategoriesViewHolder holder, int position) {
     holder.tvCategoryName.setText(mPricesCategoryEntities.get(position).getName());
+
   }
 
   @Override public int getItemCount() {
@@ -54,11 +56,16 @@ public class PricesCategoriesAdapter
 
   static class PricesCategoriesViewHolder extends RecyclerView.ViewHolder {
 
+    @BindView(R.id.llContainer) LinearLayout llContainer;
     @BindView(R.id.tvCategoryName) TextView tvCategoryName;
 
     public PricesCategoriesViewHolder(View itemView) {
       super(itemView);
       ButterKnife.bind(this, itemView);
     }
+  }
+
+  public ArrayList<PricesCategoryEntity> getPricesCategoryEntities() {
+    return mPricesCategoryEntities;
   }
 }

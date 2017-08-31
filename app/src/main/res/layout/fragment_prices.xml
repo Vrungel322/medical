@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#f5f8fc"
+  android:clickable="true"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/tvPriceCategory"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:fontFamily="sans-serif-medium"
+    android:maxLines="2"
+    android:textColor="#5b6977"
+    android:textSize="20sp"
+    android:textStyle="normal"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="Лазерная эпиляция" />
+
+  <TextView
+    android:id="@+id/tvServiceHeader"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="32dp"
+    android:layout_marginTop="20dp"
+    android:fontFamily="sans-serif-medium"
+    android:text="Услуги"
+    android:textColor="#a3a8b1"
+    android:textSize="14sp"
+    android:textStyle="normal"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvPriceCategory" />
+
+  <TextView
+    android:id="@+id/tvPricesHeader"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="32dp"
+    android:layout_marginTop="20dp"
+    android:fontFamily="sans-serif-medium"
+    android:text="Цены"
+    android:textColor="#a3a8b1"
+    android:textSize="14sp"
+    android:textStyle="normal"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvPriceCategory" />
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/rvPrices"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tvServiceHeader" />
+
+</android.support.constraint.ConstraintLayout>

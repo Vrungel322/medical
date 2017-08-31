@@ -10,7 +10,7 @@ import java.util.List;
  * Created by alexandersvyatetsky on 29/08/17.
  */
 
-@StateStrategyType(AddToEndSingleStrategy.class) public interface IPricesCategoriesFragment
+@StateStrategyType(AddToEndSingleStrategy.class) public interface IPricesCategoriesFragmentView
     extends MvpView {
   void showPricesCategories(List<PricesCategoryEntity> list);
 }

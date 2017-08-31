@@ -8,6 +8,6 @@ import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
  * Created by alexandersvyatetsky on 29/08/17.
  */
 
-@StateStrategyType(AddToEndSingleStrategy.class) public interface IPricesCategoriesAdapterPresenter
+@StateStrategyType(AddToEndSingleStrategy.class) public interface IPricesCategoriesAdapterView
     extends MvpView {
 }

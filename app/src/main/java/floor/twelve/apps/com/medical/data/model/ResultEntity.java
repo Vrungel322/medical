@@ -5,48 +5,47 @@ package floor.twelve.apps.com.medical.data.model;
  */
 
 public class ResultEntity {
-  private String mResultId;
-  private String mResultName;
-  private String mResultDescription;
-  private String mResultDate;
+  private String id;
+  private String resultName;
+  private String resultDescription;
+  private String resultDate;
 
-  public ResultEntity(String mResultId, String mResultName, String mResultDescription,
-      String mResultDate) {
-    this.mResultId = mResultId;
-    this.mResultName = mResultName;
-    this.mResultDescription = mResultDescription;
-    this.mResultDate = mResultDate;
+  public ResultEntity(String id, String resultName, String resultDescription, String resultDate) {
+    this.id = id;
+    this.resultName = resultName;
+    this.resultDescription = resultDescription;
+    this.resultDate = resultDate;
   }
 
-  public String getmResultId() {
-    return mResultId;
+  public String getId() {
+    return id;
   }
 
-  public void setmResultId(String mResultId) {
-    this.mResultId = mResultId;
+  public void setId(String id) {
+    this.id = id;
   }
 
-  public String getmResultName() {
-    return mResultName;
+  public String getResultName() {
+    return resultName;
   }
 
-  public void setmResultName(String mResultName) {
-    this.mResultName = mResultName;
+  public void setResultName(String resultName) {
+    this.resultName = resultName;
   }
 
-  public String getmResultDescription() {
-    return mResultDescription;
+  public String getResultDescription() {
+    return resultDescription;
   }
 
-  public void setmResultDescription(String mResultDescription) {
-    this.mResultDescription = mResultDescription;
+  public void setResultDescription(String resultDescription) {
+    this.resultDescription = resultDescription;
   }
 
-  public String getmResultDate() {
-    return mResultDate;
+  public String getResultDate() {
+    return resultDate;
   }
 
-  public void setmResultDate(String mResultDate) {
-    this.mResultDate = mResultDate;
+  public void setResultDate(String resultDate) {
+    this.resultDate = resultDate;
   }
 }

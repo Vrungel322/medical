@@ -18,8 +18,10 @@ import floor.twelve.apps.com.medical.feature.news.presenters.AllNewsFragmentPres
 import floor.twelve.apps.com.medical.feature.news.presenters.DetailNewsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.news.presenters.ListNewsDetailPresenter;
 import floor.twelve.apps.com.medical.feature.offers.presenters.AllSalesFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.prices.presenters.PricesAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.prices.presenters.PricesFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.results.presenters.ResultsAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.results.presenters.ResultsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.settings.fragments.AboutApplicationDialog;
@@ -109,6 +111,10 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(PricesCategoriesFragmentPresenter pricesCategoriesFragmentPresenter);
 
   void inject(PricesCategoriesAdapterPresenter pricesCategoriesAdapterPresenter);
+
+  void inject(PricesAdapterPresenter pricesAdapterPresenter);
+
+  void inject(PricesFragmentPresenter pricesFragmentPresenter);
 
   //job
   void inject(NotificationJob notificationJob);

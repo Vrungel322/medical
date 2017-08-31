@@ -2,6 +2,7 @@ package floor.twelve.apps.com.medical.feature.prices.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -12,15 +13,17 @@ import floor.twelve.apps.com.medical.base.BaseFragment;
 import floor.twelve.apps.com.medical.data.model.PricesCategoryEntity;
 import floor.twelve.apps.com.medical.feature.prices.adapters.PricesCategoriesAdapter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesFragmentPresenter;
-import floor.twelve.apps.com.medical.feature.prices.views.IPricesCategoriesFragment;
+import floor.twelve.apps.com.medical.feature.prices.views.IPricesCategoriesFragmentView;
 import floor.twelve.apps.com.medical.feature.start_point.activities.StartActivity;
+import floor.twelve.apps.com.medical.utils.ItemClickSupport;
 import java.util.List;
 
 /**
  * Created by alexandersvyatetsky on 29/08/17.
  */
 
-public class PricesCategoriesFragment extends BaseFragment implements IPricesCategoriesFragment {
+public class PricesCategoriesFragment extends BaseFragment
+    implements IPricesCategoriesFragmentView {
 
   @InjectPresenter PricesCategoriesFragmentPresenter mPresenter;
 
@@ -47,6 +50,12 @@ public class PricesCategoriesFragment extends BaseFragment implements IPricesCat
     rvPricesCategories.setHasFixedSize(true);
     rvPricesCategories.setFocusable(false);
     rvPricesCategories.setAdapter(mAdapter);
+
+    ItemClickSupport.addTo(rvPricesCategories)
+        .setOnItemClickListener((recyclerView, position, v) -> mNavigator.addFragmentBackStack(
+            (AppCompatActivity) getActivity(), R.id.container_main,
+            PricesFragment.newInstance(mAdapter.getPricesCategoryEntities().get(position).getName(),
+                mAdapter.getPricesCategoryEntities().get(position).getPriceEntities())));
   }
 
   @Override public void showPricesCategories(List<PricesCategoryEntity> list) {

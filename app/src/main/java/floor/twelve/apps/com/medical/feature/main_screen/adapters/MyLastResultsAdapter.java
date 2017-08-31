@@ -52,9 +52,9 @@ public class MyLastResultsAdapter
   }
 
   @Override public void onBindViewHolder(ResultsViewHolder holder, int position) {
-    holder.tvResultName.setText(mResultEntities.get(position).getmResultName());
-    holder.tvResultDescription.setText(mResultEntities.get(position).getmResultDescription());
-    holder.tvResultDate.setText(mResultEntities.get(position).getmResultDate());
+    holder.tvResultName.setText(mResultEntities.get(position).getResultName());
+    holder.tvResultDescription.setText(mResultEntities.get(position).getResultDescription());
+    holder.tvResultDate.setText(mResultEntities.get(position).getResultDate());
   }
 
   @Override public int getItemCount() {

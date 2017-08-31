@@ -5,6 +5,7 @@ import floor.twelve.apps.com.medical.data.local.DbHelper;
 import floor.twelve.apps.com.medical.data.local.PreferencesHelper;
 import floor.twelve.apps.com.medical.data.model.NewsEntity;
 import floor.twelve.apps.com.medical.data.model.PartnerEntity;
+import floor.twelve.apps.com.medical.data.model.PriceEntity;
 import floor.twelve.apps.com.medical.data.model.PhotoGalleryEntity;
 import floor.twelve.apps.com.medical.data.model.PricesCategoryEntity;
 import floor.twelve.apps.com.medical.data.model.ResultEntity;
@@ -244,15 +245,67 @@ public class DataManager {
   }
 
   public Observable<List<PricesCategoryEntity>> fetchListOfPricesCategories() {
+
+    ArrayList<PriceEntity> prices = new ArrayList();
+
+    prices.add(new PriceEntity("1", "Установка коронки", "200 грн"));
+    prices.add(new PriceEntity("2", "Установка брекетов", "300 грн"));
+    prices.add(new PriceEntity("3", "Протезирование зубов", "400 грн"));
+    prices.add(new PriceEntity("4", "Имплантация зубов", "500 грн"));
+    prices.add(new PriceEntity("5", "Отбеливание зубов", "600 грн"));
+    prices.add(new PriceEntity("1", "Установка коронки", "200 грн"));
+    prices.add(new PriceEntity("2", "Установка брекетов", "300 грн"));
+    prices.add(new PriceEntity("3", "Протезирование зубов", "400 грн"));
+    prices.add(new PriceEntity("4", "Имплантация зубов", "500 грн"));
+    prices.add(new PriceEntity("5", "Отбеливание зубов", "600 грн"));
+    prices.add(new PriceEntity("1", "Установка коронки", "200 грн"));
+    prices.add(new PriceEntity("2", "Установка брекетов", "300 грн"));
+    prices.add(new PriceEntity("3", "Протезирование зубов", "400 грн"));
+    prices.add(new PriceEntity("4", "Имплантация зубов", "500 грн"));
+    prices.add(new PriceEntity("5", "Отбеливание зубов", "600 грн"));
+    prices.add(new PriceEntity("1", "Установка коронки", "200 грн"));
+    prices.add(new PriceEntity("2", "Установка брекетов", "300 грн"));
+    prices.add(new PriceEntity("3", "Протезирование зубов", "400 грн"));
+    prices.add(new PriceEntity("4", "Имплантация зубов", "500 грн"));
+    prices.add(new PriceEntity("5", "Отбеливание зубов", "600 грн"));
+
     ArrayList<PricesCategoryEntity> list = new ArrayList<>();
 
-    list.add(new PricesCategoryEntity("1", "Лазерная пластическая хирургия"));
-    list.add(new PricesCategoryEntity("2", "Пластическая хирургия"));
-    list.add(new PricesCategoryEntity("3", "Маммопластика"));
-    list.add(new PricesCategoryEntity("4", "Лазерная дерматология"));
-    list.add(new PricesCategoryEntity("5", "Лазерное омоложение кожи лица"));
-    list.add(new PricesCategoryEntity("6", "Лазерная эпиляция"));
-    list.add(new PricesCategoryEntity("7", "Инъекции"));
+    list.add(new PricesCategoryEntity("1", "Лазерная пластическая хирургия", prices));
+    list.add(new PricesCategoryEntity("2", "Пластическая хирургия", prices));
+    list.add(new PricesCategoryEntity("3", "Маммопластика", prices));
+    list.add(new PricesCategoryEntity("4", "Лазерная дерматология", prices));
+    list.add(new PricesCategoryEntity("5", "Лазерное омоложение кожи лица", prices));
+    list.add(new PricesCategoryEntity("6", "Лазерная эпиляция", prices));
+    list.add(new PricesCategoryEntity("7", "Инъекции", prices));
+
+    return Observable.just(list);
+  }
+
+  public Observable<List<PriceEntity>> fetchPriceByCategory() {
+
+    ArrayList<PriceEntity> list = new ArrayList();
+
+    list.add(new PriceEntity("1", "Установка коронки", "200 грн"));
+    list.add(new PriceEntity("2", "Установка брекетов", "300 грн"));
+    list.add(new PriceEntity("3", "Протезирование зубов", "400 грн"));
+    list.add(new PriceEntity("4", "Имплантация зубов", "500 грн"));
+    list.add(new PriceEntity("5", "Отбеливание зубов", "600 грн"));
+    list.add(new PriceEntity("1", "Установка коронки", "200 грн"));
+    list.add(new PriceEntity("2", "Установка брекетов", "300 грн"));
+    list.add(new PriceEntity("3", "Протезирование зубов", "400 грн"));
+    list.add(new PriceEntity("4", "Имплантация зубов", "500 грн"));
+    list.add(new PriceEntity("5", "Отбеливание зубов", "600 грн"));
+    list.add(new PriceEntity("1", "Установка коронки", "200 грн"));
+    list.add(new PriceEntity("2", "Установка брекетов", "300 грн"));
+    list.add(new PriceEntity("3", "Протезирование зубов", "400 грн"));
+    list.add(new PriceEntity("4", "Имплантация зубов", "500 грн"));
+    list.add(new PriceEntity("5", "Отбеливание зубов", "600 грн"));
+    list.add(new PriceEntity("1", "Установка коронки", "200 грн"));
+    list.add(new PriceEntity("2", "Установка брекетов", "300 грн"));
+    list.add(new PriceEntity("3", "Протезирование зубов", "400 грн"));
+    list.add(new PriceEntity("4", "Имплантация зубов", "500 грн"));
+    list.add(new PriceEntity("5", "Отбеливание зубов", "600 грн"));
 
     return Observable.just(list);
   }

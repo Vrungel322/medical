@@ -4,7 +4,7 @@ import com.apps.twelve.floor.authorization.utils.ThreadSchedulers;
 import com.arellomobile.mvp.InjectViewState;
 import floor.twelve.apps.com.medical.App;
 import floor.twelve.apps.com.medical.base.BasePresenter;
-import floor.twelve.apps.com.medical.feature.prices.views.IPricesCategoriesFragment;
+import floor.twelve.apps.com.medical.feature.prices.views.IPricesCategoriesFragmentView;
 import rx.Subscription;
 
 /**
@@ -12,7 +12,7 @@ import rx.Subscription;
  */
 
 @InjectViewState public class PricesCategoriesFragmentPresenter
-    extends BasePresenter<IPricesCategoriesFragment> {
+    extends BasePresenter<IPricesCategoriesFragmentView> {
   @Override protected void inject() {
     App.getAppComponent().inject(this);
   }
