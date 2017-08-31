@@ -32,6 +32,10 @@
       android:icon="@drawable/ic_doctors"
         android:title="@string/menu_doctors"/>
     <item
+        android:id="@+id/menu_photogallery"
+      android:icon="@drawable/ic_about"
+        android:title="@string/menu_photogallery"/>
+    <item
         android:id="@+id/menu_about"
       android:icon="@drawable/ic_about"
         android:title="@string/menu_about"/>

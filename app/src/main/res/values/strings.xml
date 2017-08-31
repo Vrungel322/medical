@@ -81,6 +81,7 @@
   <string name="list_is_empty">Список пуст</string>
   <string name="server_error">Сервер отдыхает.</string>
   <string name="read_more">Подробней</string>
+  <string name="menu_photogallery">Фотогалерея</string>
 
   <!-- Sales types -->
   <string-array name="sales_types" translatable="true">

@@ -20,6 +20,7 @@ public final class Constants {
     public static final String ALL_NEWS_FRAGMENT = "AllNewsFragment";
     public static final String SALES_FRAGMENT = "SALES_FRAGMENT";
     public static final String PRICES_CATEGORIES_FRAGMENT = "PricesCategoriesFragment";
+    public static final String ABOUT_US_FRAGMENT = "ABOUT_US_FRAGMENT";
   }
 
   public class Notifications {
