@@ -5,7 +5,7 @@ import floor.twelve.apps.com.medical.base.BaseActivity;
 import floor.twelve.apps.com.medical.base.BaseFragment;
 import floor.twelve.apps.com.medical.di.modules.AppModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
-import floor.twelve.apps.com.medical.feature.about_us.presenters.AboutUsFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.photo_gallery.presenters.PhotoGalleryFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastBookingAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastResultsAdapterPresenter;
@@ -63,7 +63,7 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
 
   void inject(AllSalesFragmentPresenter presenter);
 
-  void inject(AboutUsFragmentPresenter presenter);
+  void inject(PhotoGalleryFragmentPresenter presenter);
 
   //activities
   void inject(BaseActivity activity);

@@ -5,6 +5,7 @@ import floor.twelve.apps.com.medical.data.local.DbHelper;
 import floor.twelve.apps.com.medical.data.local.PreferencesHelper;
 import floor.twelve.apps.com.medical.data.model.NewsEntity;
 import floor.twelve.apps.com.medical.data.model.PartnerEntity;
+import floor.twelve.apps.com.medical.data.model.PhotoGalleryEntity;
 import floor.twelve.apps.com.medical.data.model.PricesCategoryEntity;
 import floor.twelve.apps.com.medical.data.model.ResultEntity;
 import floor.twelve.apps.com.medical.data.model.SalesEntity;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Response;
 import rx.Observable;
+import rx.Subscription;
 
 import static floor.twelve.apps.com.medical.data.local.PreferencesHelper.PREF_NOTIF_DAILY_ENABLED;
 import static floor.twelve.apps.com.medical.data.local.PreferencesHelper.PREF_NOTIF_DAYS;
@@ -233,9 +235,10 @@ public class DataManager {
   public Observable<List<SalesEntity>> fetchSales() {
     List<SalesEntity> list = new ArrayList<>();
     for (int i = 0; i < 10; i++) {
-      list.add(new SalesEntity("УЗИ Ультразвуковое (соногарфиЯ) исследование" + i, "30 июня в 15:00",
-          "http://www.omagg.com/wp-content/uploads/2017/07/doctor_467179149-56b08aaf3df78cf772cf9262.jpg",
-          "25 days", "252", "1921"));
+      list.add(
+          new SalesEntity("УЗИ Ультразвуковое (соногарфиЯ) исследование" + i, "30 июня в 15:00",
+              "http://www.omagg.com/wp-content/uploads/2017/07/doctor_467179149-56b08aaf3df78cf772cf9262.jpg",
+              "25 days", "252", "1921"));
     }
     return Observable.just(list);
   }
@@ -251,6 +254,16 @@ public class DataManager {
     list.add(new PricesCategoryEntity("6", "Лазерная эпиляция"));
     list.add(new PricesCategoryEntity("7", "Инъекции"));
 
+    return Observable.just(list);
+  }
+
+  public Observable<List<PhotoGalleryEntity>> fetchGalleries() {
+    List<PhotoGalleryEntity> list = new ArrayList<>();
+    for (int i = 0; i < 5; i++) {
+      list.add(new PhotoGalleryEntity("Наш медицинский персонал" + i,
+          "https://medaboutme.ru/upload/resize_cache/iblock/e2b/940_540_1/chto_lechit_vrach_kombustiolog.jpg",
+          "10"));
+    }
     return Observable.just(list);
   }
 }
