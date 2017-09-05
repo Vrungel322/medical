@@ -38,4 +38,33 @@ public final class RxBusHelper {
 
   public class UpdateLastBookingListEvent {
   }
+
+  public static class UpdateFavoriteGoodsList {
+  }
+
+  public static class ShowResetBtn {
+  }
+
+  public static class ReloadCatalogByCategoryLocally {
+    public Integer id;
+    public String title;
+
+    public ReloadCatalogByCategoryLocally(Integer id, String title) {
+      this.id = id;
+      this.title = title;
+    }
+  }
+
+  public static class ReloadCatalogByCategory {
+    public Integer id;
+    public String title;
+
+    public ReloadCatalogByCategory(Integer id, String title) {
+      this.id = id;
+      this.title = title;
+    }
+  }
+
+  public static class UpdateGoodsList {
+  }
 }

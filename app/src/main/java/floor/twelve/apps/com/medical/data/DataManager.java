@@ -10,6 +10,8 @@ import floor.twelve.apps.com.medical.data.model.PhotoGalleryEntity;
 import floor.twelve.apps.com.medical.data.model.PricesCategoryEntity;
 import floor.twelve.apps.com.medical.data.model.ResultEntity;
 import floor.twelve.apps.com.medical.data.model.SalesEntity;
+import floor.twelve.apps.com.medical.data.model.goods.GoodsEntity;
+import floor.twelve.apps.com.medical.data.model.goods.category.GoodsCategoryEntity;
 import floor.twelve.apps.com.medical.data.remote.LastBookingEntity;
 import floor.twelve.apps.com.medical.data.remote.OfferEntity;
 import floor.twelve.apps.com.medical.data.remote.RestApi;
@@ -156,6 +158,36 @@ public class DataManager {
 
   public void setSelectedLanguage(String selectedLanguage) {
     mPref.setSelectedLanguage(selectedLanguage);
+  }
+
+  //Goods
+
+  public Observable<Response<List<GoodsEntity>>> fetchAllProducts() {
+    return mRestApi.fetchAllProducts(mPref.getLanguageCode(), mAuthorizationManager.getToken());
+  }
+
+  public Observable<Response<List<GoodsEntity>>> fetchFavoriteGoods() {
+    return mRestApi.fetchFavoriteGoods(mPref.getLanguageCode(), mAuthorizationManager.getToken());
+  }
+
+  public Observable<Response<List<GoodsEntity>>> fetchGoodsByCatalogId(Integer id) {
+    return mRestApi.fetchGoodsByCatalogId(mPref.getLanguageCode(), id);
+  }
+
+  public Observable<Response<List<GoodsCategoryEntity>>> fetchCategories() {
+    return mRestApi.fetchCategories(mPref.getLanguageCode());
+  }
+
+  //like/dislike goods
+
+  public Observable<Response<Void>> addToFavoriteGoods(int goodsId) {
+    return mRestApi.addToFavoriteGoods(mPref.getLanguageCode(), goodsId,
+        mAuthorizationManager.getToken());
+  }
+
+  public Observable<Response<Void>> removeFromFavoriteGoods(int goodsId) {
+    return mRestApi.removeFromFavoriteGoods(mPref.getLanguageCode(), goodsId,
+        mAuthorizationManager.getToken());
   }
 
   ///////////////////////////////////////////////////////////////////////////
@@ -311,6 +343,7 @@ public class DataManager {
   }
 
   public Observable<List<PhotoGalleryEntity>> fetchGalleries() {
+
     List<PhotoGalleryEntity> list = new ArrayList<>();
     for (int i = 0; i < 5; i++) {
       list.add(new PhotoGalleryEntity("Наш медицинский персонал" + i,

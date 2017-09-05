@@ -21,6 +21,7 @@ public final class Constants {
     public static final String SALES_FRAGMENT = "SALES_FRAGMENT";
     public static final String PRICES_CATEGORIES_FRAGMENT = "PricesCategoriesFragment";
     public static final String ABOUT_US_FRAGMENT = "ABOUT_US_FRAGMENT";
+    public static final String CATALOG_FRAGMENT = "CATALOG_FRAGMENT";
   }
 
   public class Notifications {
@@ -62,6 +63,11 @@ public final class Constants {
   public class Rotation {
     public static final int PORTRAIT = 2;
     public static final int LANDSCAPE = 3;
+  }
+
+  public class Other {
+    public static final String MASTER_MALE_PLACEHOLDER = "male";
+    public static final String SERVER_ANSWER_EMPTY_STRING = "0";
   }
 
   public class RemoteText {

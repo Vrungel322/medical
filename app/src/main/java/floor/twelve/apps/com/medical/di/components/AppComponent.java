@@ -5,7 +5,10 @@ import floor.twelve.apps.com.medical.base.BaseActivity;
 import floor.twelve.apps.com.medical.base.BaseFragment;
 import floor.twelve.apps.com.medical.di.modules.AppModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
-import floor.twelve.apps.com.medical.feature.photo_gallery.presenters.PhotoGalleryFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.catalog.presenters.CatalogFavoriteFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.catalog.presenters.CatalogFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.catalog.presenters.CategoryDialogFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.catalog.presenters.GoodsDetailsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastBookingAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastResultsAdapterPresenter;
@@ -18,6 +21,7 @@ import floor.twelve.apps.com.medical.feature.news.presenters.AllNewsFragmentPres
 import floor.twelve.apps.com.medical.feature.news.presenters.DetailNewsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.news.presenters.ListNewsDetailPresenter;
 import floor.twelve.apps.com.medical.feature.offers.presenters.AllSalesFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.photo_gallery.presenters.PhotoGalleryFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesFragmentPresenter;
@@ -66,6 +70,14 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(AllSalesFragmentPresenter presenter);
 
   void inject(PhotoGalleryFragmentPresenter presenter);
+
+  void inject(CatalogFavoriteFragmentPresenter presenter);
+
+  void inject(CatalogFragmentPresenter presenter);
+
+  void inject(CategoryDialogFragmentPresenter presenter);
+
+  void inject(GoodsDetailsFragmentPresenter presenter);
 
   //activities
   void inject(BaseActivity activity);

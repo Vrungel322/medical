@@ -82,6 +82,12 @@
   <string name="server_error">Сервер отдыхает.</string>
   <string name="read_more">Подробней</string>
   <string name="menu_photogallery">Фотогалерея</string>
+  <string name="catalog">Каталог</string>
+  <string name="choose_category">Выберите катеорию</string>
+  <string name="menu_favourite">Избранное</string>
+  <string name="menu_catalog">Каталог</string>
+  <string name="choose_staff">Выбор продукции</string>
+  <string name="choose_category_dialog">Выберите категорию</string>
 
   <!-- Sales types -->
   <string-array name="sales_types" translatable="true">
