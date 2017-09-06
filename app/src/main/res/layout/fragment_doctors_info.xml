@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<floor.twelve.apps.com.medical.utils.custom_views.FabNestedScroll xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/tvDoctorsInfo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fontFamily="sans-serif-light"
+      android:padding="16dp"
+      android:text="Медицинский прибор для эффективной очистки труднодоступных мест полости рта. Объем резервуара для жидкости составляет 500 мл, что позволяет проводить процедуру чистки нескольким членам семьи без необходимости заново его наполнять. Каждая из четырех насадок имеет цветную окантовку, благодаря чему каждый сможет без труда определить.Каждая из четырех насадок имеет цветную окантовку, "
+      android:textColor="#6e7279"
+      android:textSize="16sp"
+      android:textStyle="normal" />
+
+    <android.support.v7.widget.AppCompatButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginStart="16dp"
+      android:background="?colorAccent"
+      android:text="@string/booking"
+      android:textColor="@color/colorWhite" />
+
+  </LinearLayout>
+</floor.twelve.apps.com.medical.utils.custom_views.FabNestedScroll>

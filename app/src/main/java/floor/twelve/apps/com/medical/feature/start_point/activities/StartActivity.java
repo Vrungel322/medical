@@ -18,11 +18,12 @@ import com.apps.twelve.floor.authorization.data.local.LocaleHelper;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.BaseActivity;
-import floor.twelve.apps.com.medical.feature.photo_gallery.fragments.PhotoGalleryFragment;
+import floor.twelve.apps.com.medical.feature.doctors.fragments.DoctorsListFragment;
 import floor.twelve.apps.com.medical.feature.main_screen.fragments.MainFragment;
 import floor.twelve.apps.com.medical.feature.my_booking.MyBookFragment;
 import floor.twelve.apps.com.medical.feature.news.fragments.AllNewsViewFragment;
 import floor.twelve.apps.com.medical.feature.offers.fragmnets.SalesFragment;
+import floor.twelve.apps.com.medical.feature.photo_gallery.fragments.PhotoGalleryFragment;
 import floor.twelve.apps.com.medical.feature.prices.fragments.PricesCategoriesFragment;
 import floor.twelve.apps.com.medical.feature.results.fragments.ResultsFragment;
 import floor.twelve.apps.com.medical.feature.settings.activities.SettingsActivity;
@@ -194,8 +195,8 @@ public class StartActivity extends BaseActivity
             SalesFragment.newInstance(), Constants.FragmentTag.SALES_FRAGMENT);
         break;
       case R.id.menu_doctors:
-        //mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
-        //    AllNewsViewFragment.newInstance(), Constants.FragmentTag.ALL_NEWS_FRAGMENT);
+        mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
+            DoctorsListFragment.newInstance(), Constants.FragmentTag.ALL_DOCTORS_FRAGMENT);
         break;
       case R.id.menu_news:
         mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,

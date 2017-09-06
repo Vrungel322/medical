@@ -3,13 +3,16 @@ package floor.twelve.apps.com.medical.data;
 import com.apps.twelve.floor.authorization.AuthorizationManager;
 import floor.twelve.apps.com.medical.data.local.DbHelper;
 import floor.twelve.apps.com.medical.data.local.PreferencesHelper;
+import floor.twelve.apps.com.medical.data.model.DoctorEntity;
 import floor.twelve.apps.com.medical.data.model.NewsEntity;
 import floor.twelve.apps.com.medical.data.model.PartnerEntity;
-import floor.twelve.apps.com.medical.data.model.PriceEntity;
 import floor.twelve.apps.com.medical.data.model.PhotoGalleryEntity;
+import floor.twelve.apps.com.medical.data.model.PriceEntity;
 import floor.twelve.apps.com.medical.data.model.PricesCategoryEntity;
 import floor.twelve.apps.com.medical.data.model.ResultEntity;
+import floor.twelve.apps.com.medical.data.model.ReviewEntity;
 import floor.twelve.apps.com.medical.data.model.SalesEntity;
+import floor.twelve.apps.com.medical.data.model.ServiceEntity;
 import floor.twelve.apps.com.medical.data.remote.LastBookingEntity;
 import floor.twelve.apps.com.medical.data.remote.OfferEntity;
 import floor.twelve.apps.com.medical.data.remote.RestApi;
@@ -18,7 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Response;
 import rx.Observable;
-import rx.Subscription;
 
 import static floor.twelve.apps.com.medical.data.local.PreferencesHelper.PREF_NOTIF_DAILY_ENABLED;
 import static floor.twelve.apps.com.medical.data.local.PreferencesHelper.PREF_NOTIF_DAYS;
@@ -317,6 +319,65 @@ public class DataManager {
           "https://medaboutme.ru/upload/resize_cache/iblock/e2b/940_540_1/chto_lechit_vrach_kombustiolog.jpg",
           "10"));
     }
+    return Observable.just(list);
+  }
+
+  public Observable<List<DoctorEntity>> fetchAllDoctors() {
+    ArrayList<DoctorEntity> doctorEntities = new ArrayList<>();
+
+    doctorEntities.add(new DoctorEntity("1", "", "Барановская\n" + "Ирина Аркадьевна",
+        "Травматолог-ортопед детский", "1 категория, профессор", 3, 38));
+    doctorEntities.add(new DoctorEntity("1", "", "Барановская\n" + "Ирина Аркадьевна",
+        "Травматолог-ортопед детский", "1 категория, профессор", 3, 38));
+    doctorEntities.add(new DoctorEntity("1", "", "Барановская\n" + "Ирина Аркадьевна",
+        "Травматолог-ортопед детский", "1 категория, профессор", 3, 38));
+
+    return Observable.just(doctorEntities);
+  }
+
+  public Observable<List<ServiceEntity>> fetchDoctorsServices() {
+    ArrayList<ServiceEntity> serviceEntities = new ArrayList<>();
+
+    serviceEntities.add(new ServiceEntity(1, "Консультация стоматолога",
+        "Профессиональная гигиена полости рта ультразвуком. Первое посещение врача-стоматолога может быть профилактического, ознакомительного характера",
+        "", "", "200", "", "", false, false));
+    serviceEntities.add(new ServiceEntity(1, "Отбеливание зубов",
+        "Профессиональная гигиена полости рта ультразвуком. Первое посещение врача-стоматолога может быть профилактического, ознакомительного характера",
+        "", "", "200", "", "", false, false));
+    serviceEntities.add(new ServiceEntity(1, "Детский стоматолог",
+        "Профессиональная гигиена полости рта ультразвуком. Первое посещение врача-стоматолога может быть профилактического, ознакомительного характера",
+        "", "", "200", "", "", false, false));
+    serviceEntities.add(new ServiceEntity(1, "Професиональная гигиена",
+        "Профессиональная гигиена полости рта ультразвуком. Первое посещение врача-стоматолога может быть профилактического, ознакомительного характера",
+        "", "", "200", "", "", false, false));
+
+    return Observable.just(serviceEntities);
+  }
+
+  public Observable<List<ReviewEntity>> fetchDoctorsReviews() {
+    ArrayList<ReviewEntity> list = new ArrayList<>();
+
+    list.add(new ReviewEntity("1", "Ирина П.", "Вчера",
+        "Спасибо огромное очень внимательному врачу Андреевой Надежде Леонидовне!", "3", ""));
+    list.add(new ReviewEntity("1", "Ирина П.", "Вчера",
+        "Спасибо огромное очень внимательному врачу Андреевой Надежде Леонидовне!", "3", ""));
+    list.add(new ReviewEntity("1", "Ирина П.", "Вчера",
+        "Спасибо огромное очень внимательному врачу Андреевой Надежде Леонидовне!", "3", ""));
+    list.add(new ReviewEntity("1", "Ирина П.", "Вчера",
+        "Спасибо огромное очень внимательному врачу Андреевой Надежде Леонидовне!", "3", ""));
+    list.add(new ReviewEntity("1", "Ирина П.", "Вчера",
+        "Спасибо огромное очень внимательному врачу Андреевой Надежде Леонидовне!", "3", ""));
+    list.add(new ReviewEntity("1", "Ирина П.", "Вчера",
+        "Спасибо огромное очень внимательному врачу Андреевой Надежде Леонидовне!", "3", ""));
+    list.add(new ReviewEntity("1", "Ирина П.", "Вчера",
+        "Спасибо огромное очень внимательному врачу Андреевой Надежде Леонидовне!", "3", ""));
+    list.add(new ReviewEntity("1", "Ирина П.", "Вчера",
+        "Спасибо огромное очень внимательному врачу Андреевой Надежде Леонидовне!", "3", ""));
+    list.add(new ReviewEntity("1", "Ирина П.", "Вчера",
+        "Спасибо огромное очень внимательному врачу Андреевой Надежде Леонидовне!", "3", ""));
+    list.add(new ReviewEntity("1", "Ирина П.", "Вчера",
+        "Спасибо огромное очень внимательному врачу Андреевой Надежде Леонидовне!", "3", ""));
+
     return Observable.just(list);
   }
 }

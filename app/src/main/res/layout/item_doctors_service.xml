@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="8dp"
+  android:minHeight="75dp">
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/clParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+      android:id="@+id/tvServiceName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="16dp"
+      android:layout_marginLeft="30dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginStart="30dp"
+      android:layout_marginTop="30dp"
+      android:fontFamily="sans-serif-medium"
+      android:maxLines="2"
+      android:text="Детский стоматолог"
+      android:textColor="#616e7b"
+      android:textSize="16sp"
+      android:textStyle="normal"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@+id/cbArrow"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+      android:id="@+id/cbArrow"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="20dp"
+      android:layout_marginRight="20dp"
+      android:layout_marginTop="30dp"
+      android:button="@drawable/ic_arrow_down"
+      android:checked="false"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.constraint.ConstraintLayout
+      android:id="@+id/clDoctorInfo"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvServiceName">
+
+      <TextView
+        android:id="@+id/tvServiceDescription"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Профессиональная гигиена полости рта ультразвуком. Первое посещение врача-стоматолога может быть профилактического, ознакомительного характера"
+        android:textColor="#a9b1b7"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+      <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ivLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvServiceDescription"
+        app:srcCompat="@drawable/location_pin_1" />
+
+      <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif"
+        android:text="Партизанский пр-т, 48-105"
+        android:textColor="#a3a8b1"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toRightOf="@+id/ivLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvServiceDescription" />
+
+      <TextView
+        android:id="@+id/tvServicePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:lineSpacingExtra="6.3sp"
+        android:text="@string/booking_price"
+        android:textColor="?colorAccent"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAddress"
+        app:layout_constraintRight_toRightOf="parent" />
+
+      <android.support.v7.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="?colorAccent"
+        android:text="@string/booking"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+  </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

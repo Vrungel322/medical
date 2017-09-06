@@ -5,7 +5,14 @@ import floor.twelve.apps.com.medical.base.BaseActivity;
 import floor.twelve.apps.com.medical.base.BaseFragment;
 import floor.twelve.apps.com.medical.di.modules.AppModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
-import floor.twelve.apps.com.medical.feature.photo_gallery.presenters.PhotoGalleryFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorDetailFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorsAdapterPresenter;
+import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorsInfoFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorsListFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorsReviewsAdapterPresenter;
+import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorsReviewsFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorsServicesAdapterPresenter;
+import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorsServicesFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastBookingAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastResultsAdapterPresenter;
@@ -18,6 +25,7 @@ import floor.twelve.apps.com.medical.feature.news.presenters.AllNewsFragmentPres
 import floor.twelve.apps.com.medical.feature.news.presenters.DetailNewsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.news.presenters.ListNewsDetailPresenter;
 import floor.twelve.apps.com.medical.feature.offers.presenters.AllSalesFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.photo_gallery.presenters.PhotoGalleryFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesFragmentPresenter;
@@ -115,6 +123,22 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(PricesAdapterPresenter pricesAdapterPresenter);
 
   void inject(PricesFragmentPresenter pricesFragmentPresenter);
+
+  void inject(DoctorsListFragmentPresenter doctorsListFragmentPresenter);
+
+  void inject(DoctorsAdapterPresenter doctorsAdapterPresenter);
+
+  void inject(DoctorDetailFragmentPresenter doctorDetailFragmentPresenter);
+
+  void inject(DoctorsInfoFragmentPresenter doctorsInfoFragmentPresenter);
+
+  void inject(DoctorsServicesFragmentPresenter doctorsServicesFragmentPresenter);
+
+  void inject(DoctorsReviewsFragmentPresenter doctorsReviewsFragmentPresenter);
+
+  void inject(DoctorsServicesAdapterPresenter doctorsServicesAdapterPresenter);
+
+  void inject(DoctorsReviewsAdapterPresenter doctorsReviewsAdapterPresenter);
 
   //job
   void inject(NotificationJob notificationJob);
