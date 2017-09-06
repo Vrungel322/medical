@@ -23,7 +23,8 @@ import floor.twelve.apps.com.medical.feature.news.presenters.AllNewsFragmentPres
 import floor.twelve.apps.com.medical.feature.news.presenters.DetailNewsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.news.presenters.ListNewsDetailPresenter;
 import floor.twelve.apps.com.medical.feature.offers.presenters.AllSalesFragmentPresenter;
-import floor.twelve.apps.com.medical.feature.photo_gallery.presenters.PhotoGalleryFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.our_works.presenters.OurWorkFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.our_works.presenters.WorkDetailsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesFragmentPresenter;
@@ -71,7 +72,7 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
 
   void inject(AllSalesFragmentPresenter presenter);
 
-  void inject(PhotoGalleryFragmentPresenter presenter);
+  void inject(OurWorkFragmentPresenter presenter);
 
   void inject(CatalogFavoriteFragmentPresenter presenter);
 
@@ -84,6 +85,8 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(ContactsAboutFragmentPresenter presenter);
 
   void inject(ContactsFragmentPresenter presenter);
+
+  void inject(WorkDetailsFragmentPresenter presenter);
 
   //activities
   void inject(BaseActivity activity);

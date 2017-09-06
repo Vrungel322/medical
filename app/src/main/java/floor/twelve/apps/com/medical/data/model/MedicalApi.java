@@ -42,4 +42,22 @@ public interface MedicalApi {
   @DELETE("api/v1/users/favorite/products/{product_id}")
   Observable<Response<Void>> removeFromFavoriteGoods(@Header("lng") String language,
       @Path("product_id") int goodsId, @Header("authorization") String token);
+
+  @GET("api/v1/galleries") Observable<Response<List<OurWorkEntity>>> fetchListOfWorks(
+      @Header("lng") String language);
+
+  @GET("api/v1/galleries") Observable<Response<List<OurWorkEntity>>> fetchListOfWorksAuth(
+      @Header("lng") String language, @Header("authorization") String token);
+
+  @POST("api/v1/users/favorite/photos") @FormUrlEncoded
+  Observable<Response<Void>> addToFavoritePhoto(@Header("lng") String language,
+      @Field("photo_id") int photoId, @Header("authorization") String token);
+
+  @DELETE("api/v1/users/favorite/photos/{photoId}")
+  Observable<Response<Void>> removeFromFavoritePhoto(@Header("lng") String language,
+      @Path("photoId") int photoId, @Header("authorization") String token);
+
+  @GET("api/v1/users/favorite/photos")
+  Observable<Response<List<PhotoWorksEntity>>> fetchFavoritePhotos(@Header("lng") String language,
+      @Header("authorization") String token);
 }

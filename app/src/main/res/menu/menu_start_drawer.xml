@@ -36,7 +36,7 @@
       android:icon="@drawable/ic_about"
         android:title="@string/menu_catalog"/>
     <item
-        android:id="@+id/menu_photogallery"
+        android:id="@+id/menu_our_work"
       android:icon="@drawable/ic_about"
         android:title="@string/menu_photogallery"/>
     <item

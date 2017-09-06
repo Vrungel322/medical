@@ -4,7 +4,9 @@ import com.apps.twelve.floor.authorization.AuthorizationManager;
 import floor.twelve.apps.com.medical.data.local.DbHelper;
 import floor.twelve.apps.com.medical.data.local.PreferencesHelper;
 import floor.twelve.apps.com.medical.data.model.NewsEntity;
+import floor.twelve.apps.com.medical.data.model.OurWorkEntity;
 import floor.twelve.apps.com.medical.data.model.PartnerEntity;
+import floor.twelve.apps.com.medical.data.model.PhotoWorksEntity;
 import floor.twelve.apps.com.medical.data.model.PriceEntity;
 import floor.twelve.apps.com.medical.data.model.PhotoGalleryEntity;
 import floor.twelve.apps.com.medical.data.model.PricesCategoryEntity;
@@ -81,6 +83,32 @@ public class DataManager {
   public void logoutUser() {
     mPref.logoutUser();
     mAuthorizationManager.clear();
+  }
+
+  //ourWorks
+
+  public Observable<Response<List<OurWorkEntity>>> fetchListOfWorks() {
+    return mRestApi.fetchListOfWorks(mPref.getLanguageCode());
+  }
+
+  public Observable<Response<List<OurWorkEntity>>> fetchListOfWorksAuth() {
+    return mRestApi.fetchListOfWorksAuth(mPref.getLanguageCode(), mAuthorizationManager.getToken());
+  }
+
+  public Observable<Response<List<PhotoWorksEntity>>> fetchFavoritePhotos() {
+    return mRestApi.fetchFavoritePhotos(mPref.getLanguageCode(), mAuthorizationManager.getToken());
+  }
+
+  //like/dislike ourWork photo
+
+  public Observable<Response<Void>> addToFavoritePhoto(int photoId) {
+    return mRestApi.addToFavoritePhoto(mPref.getLanguageCode(), photoId,
+        mAuthorizationManager.getToken());
+  }
+
+  public Observable<Response<Void>> removeFromFavoritePhoto(int photoId) {
+    return mRestApi.removeFromFavoritePhoto(mPref.getLanguageCode(), photoId,
+        mAuthorizationManager.getToken());
   }
 
   //Notification
@@ -339,17 +367,6 @@ public class DataManager {
     list.add(new PriceEntity("4", "Имплантация зубов", "500 грн"));
     list.add(new PriceEntity("5", "Отбеливание зубов", "600 грн"));
 
-    return Observable.just(list);
-  }
-
-  public Observable<List<PhotoGalleryEntity>> fetchGalleries() {
-
-    List<PhotoGalleryEntity> list = new ArrayList<>();
-    for (int i = 0; i < 5; i++) {
-      list.add(new PhotoGalleryEntity("Наш медицинский персонал" + i,
-          "https://medaboutme.ru/upload/resize_cache/iblock/e2b/940_540_1/chto_lechit_vrach_kombustiolog.jpg",
-          "10"));
-    }
     return Observable.just(list);
   }
 }

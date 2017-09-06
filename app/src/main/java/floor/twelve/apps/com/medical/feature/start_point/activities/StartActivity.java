@@ -20,7 +20,7 @@ import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.BaseActivity;
 import floor.twelve.apps.com.medical.feature.catalog.fragments.CatalogFragment;
 import floor.twelve.apps.com.medical.feature.contacts.fragments.ContactsFragment;
-import floor.twelve.apps.com.medical.feature.photo_gallery.fragments.PhotoGalleryFragment;
+import floor.twelve.apps.com.medical.feature.our_works.fragments.OurWorkFragment;
 import floor.twelve.apps.com.medical.feature.main_screen.fragments.MainFragment;
 import floor.twelve.apps.com.medical.feature.my_booking.MyBookFragment;
 import floor.twelve.apps.com.medical.feature.news.fragments.AllNewsViewFragment;
@@ -211,9 +211,9 @@ public class StartActivity extends BaseActivity
         mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
             CatalogFragment.newInstance(), Constants.FragmentTag.CATALOG_FRAGMENT);
         break;
-      case R.id.menu_photogallery:
-      mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
-            PhotoGalleryFragment.newInstance(), Constants.FragmentTag.ABOUT_US_FRAGMENT);
+      case R.id.menu_our_work:
+        mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
+            OurWorkFragment.newInstance(), Constants.FragmentTag.OUR_WORK_FRAGMENT);
       break;
       case R.id.nav_settings:
         mNavigator.startActivity(StartActivity.this,

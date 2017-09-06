@@ -54,6 +54,7 @@ public final class Constants {
     public static final String PRICES_KEY = "PRICES_KEY";
     public static final String PRICE_CATEGORY_KEY = "PRICE_CATEGORY_KEY";
     public static final String GOODS_ENTITY_KEY = "GOODS_ENTITY_KEY";
+    public static final String OUR_ENTITY_KEY = "OUR_ENTITY_KEY";
   }
 
   public class ChangingUserInfoField {

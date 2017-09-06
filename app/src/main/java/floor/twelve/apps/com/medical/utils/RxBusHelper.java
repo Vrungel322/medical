@@ -67,4 +67,7 @@ public final class RxBusHelper {
 
   public static class UpdateGoodsList {
   }
+
+  public static class UpdateOurWorkList {
+  }
 }
