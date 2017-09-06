@@ -19,6 +19,7 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.BaseActivity;
 import floor.twelve.apps.com.medical.feature.catalog.fragments.CatalogFragment;
+import floor.twelve.apps.com.medical.feature.contacts.fragments.ContactsFragment;
 import floor.twelve.apps.com.medical.feature.photo_gallery.fragments.PhotoGalleryFragment;
 import floor.twelve.apps.com.medical.feature.main_screen.fragments.MainFragment;
 import floor.twelve.apps.com.medical.feature.my_booking.MyBookFragment;
@@ -203,8 +204,8 @@ public class StartActivity extends BaseActivity
             AllNewsViewFragment.newInstance(), Constants.FragmentTag.ALL_NEWS_FRAGMENT);
         break;
       case R.id.menu_about:
-        //mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
-        //    PhotoGalleryFragment.newInstance(), Constants.FragmentTag.ABOUT_US_FRAGMENT);
+        mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,
+            ContactsFragment.newInstance(), Constants.FragmentTag.ABOUT_US_FRAGMENT);
         break;
       case R.id.nav_catalog:
         mNavigator.addFragmentTagClearBackStackNotCopy(StartActivity.this, R.id.container_main,

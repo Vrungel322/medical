@@ -9,6 +9,8 @@ import floor.twelve.apps.com.medical.feature.catalog.presenters.CatalogFavoriteF
 import floor.twelve.apps.com.medical.feature.catalog.presenters.CatalogFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.catalog.presenters.CategoryDialogFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.catalog.presenters.GoodsDetailsFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.contacts.presenters.ContactsAboutFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.contacts.presenters.ContactsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastBookingAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastResultsAdapterPresenter;
@@ -78,6 +80,10 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(CategoryDialogFragmentPresenter presenter);
 
   void inject(GoodsDetailsFragmentPresenter presenter);
+
+  void inject(ContactsAboutFragmentPresenter presenter);
+
+  void inject(ContactsFragmentPresenter presenter);
 
   //activities
   void inject(BaseActivity activity);
