@@ -23,6 +23,7 @@ public final class Constants {
     public static final String ABOUT_US_FRAGMENT = "ABOUT_US_FRAGMENT";
     public static final String CATALOG_FRAGMENT = "CATALOG_FRAGMENT";
     public static final String OUR_WORK_FRAGMENT = "OUR_WORK_FRAGMENT";
+    public static final String ALL_DOCTORS_FRAGMENT = "ALL_DOCTORS_FRAGMENT";
   }
 
   public class Notifications {

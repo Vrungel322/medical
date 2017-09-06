@@ -142,7 +142,7 @@
           android:layout_width="24dp"
           android:layout_height="24dp"
           android:layout_marginTop="8dp"
-          android:background="@drawable/image"
+        android:background="@drawable/doctor_place_holder"
           app:layout_constraintLeft_toLeftOf="@+id/imageView5"
           app:layout_constraintTop_toBottomOf="@+id/imageView5"
           />

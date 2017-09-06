@@ -106,11 +106,22 @@
   <string name="hide">Свернуть</string>
   <string name="more">Еще</string>
 
+  <string name="doctors_reviews">Отзывы (%1$d)</string>
+  <string name="booking">Записаться</string>
+  <string name="booking_price">%1$s UAH</string>
+  <string name="give_feedback">Оставить отзыв</string>
 
   <!-- Sales types -->
   <string-array name="sales_types" translatable="true">
     <item>Все акции</item>
     <item>Популярные</item>
+  </string-array>
+
+  <!-- Doctor detail tabs -->
+  <string-array name="doctor_detail_tab_types" translatable="true">
+    <item>Инфо</item>
+    <item>Услуги</item>
+    <item>Отзывы</item>
   </string-array>
 
 </resources>
