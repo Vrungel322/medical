@@ -37,13 +37,13 @@
       <EditText
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/divider"
         android:fontFamily="sans-serif-light"
         android:inputType="textMultiLine"
         android:padding="16dp"
         android:textColor="#6e7279"
         android:textSize="14sp"
         android:textStyle="normal"
-        android:layout_above="@+id/divider"
         tools:text="Уважаемый,Валерий Валерьевич! Не знаю читаете ли Вы отзывы из-за своей неимоверной занятости, но надеюсь, что слова моей искренней благодарности дойдут до Вас! Вы были моей последней надеждой и эту надежду оправдали! С возвращением моих роскошных волос я вернулась к нормальной жизни и в этом Ваша огромная заслуга! Я не встречала врача с таким запасом профессиональных знаний и искренним желанием помочь! " />
 
       <View
