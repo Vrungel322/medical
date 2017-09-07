@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.BindView;
@@ -81,6 +82,7 @@ public class MastersVerticalAdapter
       holder.mTextViewMasterName.setText(mMasterEntities.get(position).getMasterName());
       holder.mTextViewMasterDescription.setText(
           mMasterEntities.get(position).getMasterDescription());
+      holder.mRatingBar.setRating(mMasterEntities.get(position).getMasterRating());
     }
 
     if (this.mSelectedItem == position) {
@@ -119,6 +121,7 @@ public class MastersVerticalAdapter
     @BindView(R.id.tvMasterName) TextView mTextViewMasterName;
     @BindView(R.id.tvMasterDescription) TextView mTextViewMasterDescription;
     @BindView(R.id.rlParent) RelativeLayout mRelativeLayoutParent;
+    @BindView(R.id.rbMaster) RatingBar mRatingBar;
 
     MastersViewHolder(View view) {
       super(view);

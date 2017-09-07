@@ -30,77 +30,87 @@
           app:layout_constraintRight_toRightOf="parent"
           app:layout_constraintTop_toTopOf="parent"
           >
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="?colorAccent"
-            android:alpha=".2"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginLeft="0dp"
-            app:layout_constraintLeft_toLeftOf="parent"
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="0dp"
-            android:layout_marginRight="0dp"
-            app:layout_constraintRight_toRightOf="parent"
-            />
-        <TextView
-            android:id="@+id/tv_master"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/booking_master"
-            android:textColor="@color/colorLightGray"
-            android:textSize="16sp"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            />
-        <TextView
-            android:id="@+id/tv_master_description"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="24dp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:textColor="@color/colorGray"
-            android:textSize="16sp"
-            app:layout_constraintLeft_toRightOf="@+id/tv_master"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_master"
-            />
-        <TextView
-            android:id="@+id/tv_service"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/booking_service"
-            android:textColor="@color/colorLightGray"
-            android:textSize="16sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_master"
-            />
-        <TextView
-            android:id="@+id/tv_service_description"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:paddingBottom="16dp"
-            android:textColor="@color/colorGray"
-            android:textSize="16sp"
-            app:layout_constraintLeft_toLeftOf="@+id/tv_master_description"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_service"
-            />
+            >
+          <android.support.constraint.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              >
+
+            <TextView
+                android:id="@+id/tv_master_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="24dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#ffffff"
+
+                android:textSize="16sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_master"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_master"
+                />
+            <TextView
+                android:id="@+id/tv_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/booking_service"
+                android:textColor="#ffffff"
+
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_master"
+                />
+            <TextView
+                android:id="@+id/tv_service_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingBottom="16dp"
+                android:textColor="#ffffff"
+
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_master_description"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_service"
+                />
+            <TextView
+                android:id="@+id/tv_master"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/booking_master"
+                android:textColor="#ffffff"
+
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+          </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
 
       </android.support.constraint.ConstraintLayout>
       <RelativeLayout
@@ -167,8 +177,8 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:alpha="0.5"
-              app:srcCompat="@drawable/bonus_pattern"
               android:scaleType="centerCrop"
+              app:srcCompat="@drawable/bonus_pattern"
               />
           <TextView
               android:id="@+id/textView7"
@@ -182,9 +192,9 @@
               android:layout_marginStart="8dp"
               android:layout_marginTop="32dp"
               android:gravity="center"
-              android:textSize="18sp"
               android:text="@string/time_empty"
               android:textColor="@color/colorWhite"
+              android:textSize="18sp"
               />
           <TextView
               android:id="@+id/textView8"
@@ -198,9 +208,9 @@
               android:layout_marginStart="8dp"
               android:layout_marginTop="8dp"
               android:gravity="center"
-              android:textSize="16sp"
               android:text="@string/time_empty_descr"
               android:textColor="@color/colorWhite"
+              android:textSize="16sp"
               />
           <Button
               android:id="@+id/buttonBookingPhone"
@@ -210,15 +220,15 @@
               android:layout_centerHorizontal="true"
               android:layout_marginBottom="8dp"
               android:layout_marginTop="16dp"
+              android:background="@color/colorTTransparentBlack"
               android:drawableLeft="@drawable/ic_phone_white"
               android:drawablePadding="5dp"
               android:drawableStart="@drawable/ic_phone_white"
-              android:text="80996753872"
-              android:textSize="18sp"
               android:paddingLeft="16dp"
               android:paddingRight="16dp"
-              android:background="@color/colorTTransparentBlack"
+              android:text="80996753872"
               android:textColor="@color/colorWhite"
+              android:textSize="18sp"
               />
         </RelativeLayout>
       </RelativeLayout>
