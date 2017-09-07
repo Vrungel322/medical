@@ -22,6 +22,7 @@ import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorsReviewsAd
 import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorsReviewsFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorsServicesAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.doctors.presenters.DoctorsServicesFragmentPresenter;
+import floor.twelve.apps.com.medical.feature.doctors.presenters.FeedbackDialogPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MainFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastBookingAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.main_screen.presenters.MyLastResultsAdapterPresenter;
@@ -169,6 +170,8 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(DoctorsServicesAdapterPresenter doctorsServicesAdapterPresenter);
 
   void inject(DoctorsReviewsAdapterPresenter doctorsReviewsAdapterPresenter);
+
+  void inject(FeedbackDialogPresenter feedbackDialogPresenter);
 
   //job
   void inject(NotificationJob notificationJob);

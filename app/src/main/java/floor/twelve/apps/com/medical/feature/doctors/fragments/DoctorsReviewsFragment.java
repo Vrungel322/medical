@@ -2,11 +2,9 @@ package floor.twelve.apps.com.medical.feature.doctors.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.RelativeLayout;
 import butterknife.BindView;
 import butterknife.OnClick;
 import com.arellomobile.mvp.presenter.InjectPresenter;
@@ -26,8 +24,6 @@ public class DoctorsReviewsFragment extends BaseFragment implements IDoctorsRevi
 
   @InjectPresenter DoctorsReviewsFragmentPresenter mPresenter;
   @BindView(R.id.rvDoctorsReviews) RecyclerView rvDoctorsReviews;
-  @BindView(R.id.reviewContainer) RelativeLayout reviewContainer;
-  @BindView(R.id.btnFeedback) AppCompatButton mBtnFeedback;
   private DoctorsReviewsAdapter mAdapter;
 
   public DoctorsReviewsFragment() {
@@ -47,7 +43,6 @@ public class DoctorsReviewsFragment extends BaseFragment implements IDoctorsRevi
 
     rvDoctorsReviews.setLayoutManager(new LinearLayoutManager(getContext()));
     rvDoctorsReviews.setHasFixedSize(true);
-    rvDoctorsReviews.setNestedScrollingEnabled(false);
     rvDoctorsReviews.setAdapter(mAdapter);
   }
 
@@ -55,13 +50,8 @@ public class DoctorsReviewsFragment extends BaseFragment implements IDoctorsRevi
     mAdapter.addListReviewEntities(list);
   }
 
-  @OnClick(R.id.btnFeedback) public void onViewClicked() {
-    if (reviewContainer.getVisibility() == View.GONE) {
-      reviewContainer.setVisibility(View.VISIBLE);
-      mBtnFeedback.setText("Опубликовать");
-    } else {
-      reviewContainer.setVisibility(View.GONE);
-      mBtnFeedback.setText("Оставить отзыв");
-    }
+  @OnClick(R.id.fab_feedback) public void giveFeedback() {
+    FeedbackDialog dialog = new FeedbackDialog();
+    dialog.show(getActivity().getFragmentManager(), "");
   }
 }
