@@ -48,6 +48,7 @@ public class DoctorDetailFragment extends BaseFragment implements IDoctorDetailF
 
   @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
+    getActivity().findViewById(R.id.fab_booking).setVisibility(View.GONE);
     viewPagerDoctor.setAdapter(new DoctorsInfoTypePagerAdapter(this.getChildFragmentManager(),
         Arrays.asList(getResources().getStringArray(R.array.doctor_detail_tab_types))));
     tabLayout.setupWithViewPager(viewPagerDoctor);
