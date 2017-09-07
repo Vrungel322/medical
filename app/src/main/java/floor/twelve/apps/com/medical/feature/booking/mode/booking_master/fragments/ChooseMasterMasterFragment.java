@@ -59,6 +59,7 @@ public class ChooseMasterMasterFragment extends BaseFragment
   }
 
   @Override public void showMasters(List<MasterEntity> masterEntities) {
+    masterEntities.get(0).setMasterRating(4);
     mMastersVerticalAdapter.addListMasterEntity(masterEntities);
   }
 
