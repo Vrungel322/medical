@@ -4,7 +4,10 @@ import dagger.Component;
 import floor.twelve.apps.com.medical.base.BaseActivity;
 import floor.twelve.apps.com.medical.base.BaseFragment;
 import floor.twelve.apps.com.medical.di.modules.AppModule;
+import floor.twelve.apps.com.medical.di.modules.BookingModule;
 import floor.twelve.apps.com.medical.di.scopes.AppScope;
+import floor.twelve.apps.com.medical.feature.booking.presenters.BookingActivityPresenter;
+import floor.twelve.apps.com.medical.feature.booking.presenters.BookingFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.catalog.presenters.CatalogFavoriteFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.catalog.presenters.CatalogFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.catalog.presenters.CategoryDialogFragmentPresenter;
@@ -33,7 +36,6 @@ import floor.twelve.apps.com.medical.feature.news.presenters.ListNewsDetailPrese
 import floor.twelve.apps.com.medical.feature.offers.presenters.AllSalesFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.our_works.presenters.OurWorkFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.our_works.presenters.WorkDetailsFragmentPresenter;
-import floor.twelve.apps.com.medical.feature.photo_gallery.presenters.PhotoGalleryFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesAdapterPresenter;
 import floor.twelve.apps.com.medical.feature.prices.presenters.PricesCategoriesFragmentPresenter;
@@ -62,6 +64,8 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
  */
 
 @AppScope @Component(modules = AppModule.class) public interface AppComponent {
+
+  BookingComponent plusBookingComponent(BookingModule bookingModule);
 
   //presenters
 
@@ -96,6 +100,10 @@ import floor.twelve.apps.com.medical.utils.jobs.NotificationJob;
   void inject(ContactsFragmentPresenter presenter);
 
   void inject(WorkDetailsFragmentPresenter presenter);
+
+  void inject(BookingActivityPresenter presenter);
+
+  void inject(BookingFragmentPresenter presenter);
 
   //activities
   void inject(BaseActivity activity);

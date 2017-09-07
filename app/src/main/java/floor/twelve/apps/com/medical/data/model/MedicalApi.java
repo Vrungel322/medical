@@ -2,14 +2,17 @@ package floor.twelve.apps.com.medical.data.model;
 
 import floor.twelve.apps.com.medical.data.model.goods.GoodsEntity;
 import floor.twelve.apps.com.medical.data.model.goods.category.GoodsCategoryEntity;
+import floor.twelve.apps.com.medical.data.remote.LastBookingEntity;
 import java.util.List;
 import retrofit2.Response;
+import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 import rx.Observable;
@@ -59,5 +62,64 @@ public interface MedicalApi {
 
   @GET("api/v1/users/favorite/photos")
   Observable<Response<List<PhotoWorksEntity>>> fetchFavoritePhotos(@Header("lng") String language,
+      @Header("authorization") String token);
+
+  @GET("api/v1/categories") Observable<Response<List<CategoryEntity>>> fetchCategory(
+      @Header("lng") String language);
+
+  @GET("api/v1/services") Observable<Response<List<ServiceEntity>>> fetchAllServices(
+      @Header("lng") String language);
+
+  @GET("api/v1/categories/{id}/services")
+  Observable<Response<List<ServiceEntity>>> fetchServicesOfCategoryWithId(
+      @Header("lng") String language, @Path("id") int categoryId);
+
+  @GET("api/v1/categories/{id}")
+  Observable<Response<List<CategoryEntity>>> fetchCategoriesOfCategoryWithId(
+      @Header("lng") String language, @Path("id") int parentId);
+
+  @GET("api/v1/schedules/{id}") Observable<Response<List<DataServiceEntity>>> fetchDaysData(
+      @Header("lng") String language, @Path("id") String serviceIdAtData);
+
+  @GET("api/v1/services/{serviceId}/schedules/{dataID}/masters")
+  Observable<Response<List<MasterEntity>>> fetchMasters(@Header("lng") String language,
+      @Path("serviceId") String serviceId, @Path("dataID") String dataID);
+
+  @GET("api/v1/masters") Observable<Response<List<MasterEntity>>> fetchAllMasters(
+      @Header("lng") String language);
+
+  @GET("api/v1/masters/{masterId}")
+  Observable<Response<List<ServiceEntity>>> fetchAllServicesByMasterId(
+      @Header("lng") String language, @Path("masterId") String masterId);
+
+  @GET("api/v1/masters/{masterId}/schedules")
+  Observable<Response<List<DataServiceEntity>>> fetchDaysDataWithMasterId(
+      @Header("lng") String language, @Path("masterId") String masterId);
+
+  @POST("api/v1/entry") Observable<Response<LastBookingEntity>> checkInService(
+      @Header("lng") String language, @Header("authorization") String token,
+      @Body BookingServerEntity bookingServerEntity);
+
+  @GET("api/v1/users/entries") Observable<Response<List<LastBookingEntity>>> fetchLastBooking(
+      @Header("lng") String language, @Header("authorization") String token);
+
+  @GET("api/v1/users/entries")
+  Observable<Response<List<LastBookingEntity>>> fetchLastBookingHistory(
+      @Header("lng") String language, @Header("authorization") String token,
+      @Query("status") String collectionOfStatus, @Query("scheduleFrom") int fromTimeSec);
+
+  @DELETE("api/v1/entry/{id}") Observable<Response<Void>> cancelOrder(
+      @Header("lng") String language, @Path("id") String serviceId,
+      @Header("authorization") String token);
+
+  @PUT("api/v1/entry/{entryId}") @FormUrlEncoded Observable<Response<Void>> postponeService(
+      @Header("lng") String language, @Path("entryId") String entryId,
+      @Header("authorization") String token, @Field("schedule_id") int scheduleId);
+
+  @GET("api/v1/users/me/bonuses") Observable<Response<BonusEntity>> fetchBonusCount(
+      @Header("lng") String language, @Header("authorization") String token);
+
+  @GET("api/v1/users/me/bonuses_history")
+  Observable<Response<List<BonusHistoryEntity>>> fetchBonusHistory(@Header("lng") String language,
       @Header("authorization") String token);
 }

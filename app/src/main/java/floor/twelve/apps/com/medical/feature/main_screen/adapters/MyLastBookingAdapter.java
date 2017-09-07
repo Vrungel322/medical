@@ -54,7 +54,7 @@ public class MyLastBookingAdapter
   @Override public void onBindViewHolder(MyLastBookingViewHolder holder, int position) {
     holder.mTextViewServiceType.setText(mLastBookingEntities.get(position).getServiceType());
     holder.mTextViewServiceName.setText(mLastBookingEntities.get(position).getServiceName());
-    holder.mTextViewTime.setText(mLastBookingEntities.get(position).getServiceTime());
+    holder.mTextViewTime.setText(mLastBookingEntities.get(position).getServiceTime().toString());
     holder.mTextViewServiceDescription.setText(
         mLastBookingEntities.get(position).getServiceDescription());
     holder.mTextViewAddress.setText(mLastBookingEntities.get(position).getAddress());

@@ -18,15 +18,15 @@ import com.apps.twelve.floor.authorization.data.local.LocaleHelper;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import floor.twelve.apps.com.medical.R;
 import floor.twelve.apps.com.medical.base.BaseActivity;
-import floor.twelve.apps.com.medical.feature.doctors.fragments.DoctorsListFragment;
+import floor.twelve.apps.com.medical.feature.booking.activities.BookingActivity;
 import floor.twelve.apps.com.medical.feature.catalog.fragments.CatalogFragment;
 import floor.twelve.apps.com.medical.feature.contacts.fragments.ContactsFragment;
-import floor.twelve.apps.com.medical.feature.our_works.fragments.OurWorkFragment;
+import floor.twelve.apps.com.medical.feature.doctors.fragments.DoctorsListFragment;
 import floor.twelve.apps.com.medical.feature.main_screen.fragments.MainFragment;
 import floor.twelve.apps.com.medical.feature.my_booking.MyBookFragment;
 import floor.twelve.apps.com.medical.feature.news.fragments.AllNewsViewFragment;
 import floor.twelve.apps.com.medical.feature.offers.fragmnets.SalesFragment;
-import floor.twelve.apps.com.medical.feature.photo_gallery.fragments.PhotoGalleryFragment;
+import floor.twelve.apps.com.medical.feature.our_works.fragments.OurWorkFragment;
 import floor.twelve.apps.com.medical.feature.prices.fragments.PricesCategoriesFragment;
 import floor.twelve.apps.com.medical.feature.results.fragments.ResultsFragment;
 import floor.twelve.apps.com.medical.feature.settings.activities.SettingsActivity;
@@ -59,8 +59,14 @@ public class StartActivity extends BaseActivity
     super.onCreate(savedInstanceState);
     setUpUI();
 
-    //mFabBooking.setOnClickListener(v -> mNavigator.startActivity(StartActivity.this,
-    //    new Intent(StartActivity.this, BookingActivity.class)));
+    mFabBooking.setOnClickListener(v -> {
+      if (mAuthorizationManager.isAuthorized()) {
+        mNavigator.startActivity(StartActivity.this,
+            new Intent(StartActivity.this, BookingActivity.class));
+      } else {
+        mStartActivityPresenter.showAlertDialog();
+      }
+    });
 
     getSupportFragmentManager().addOnBackStackChangedListener(
         () -> mStartActivityPresenter.setDrawerIndicator());

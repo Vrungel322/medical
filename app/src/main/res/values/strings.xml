@@ -110,6 +110,56 @@
   <string name="booking">Записаться</string>
   <string name="booking_price">%1$s UAH</string>
   <string name="give_feedback">Оставить отзыв</string>
+  <string name="title_write_error">Проверьте данные</string>
+  <string name="any_master">Любой Специалист</string>
+  <string name="booking_break">Вы точно хотите ее прервать?</string>
+  <string name="booking_not_finished">Запись не закончена</string>
+  <string name="error_connection">Ошибка соеденения</string>
+  <string name="сheck_internet_connection">Проверте подключение к интернету</string>
+  <string name="menu_my_bonus">Мои бонусы</string>
+  <string name="book_create">Записаться</string>
+  <string name="dialog_yes">Да</string>
+  <string name="detail">Подробней</string>
+  <string name="dialog_cancel">Отмена</string>
+  <string name="error_time_not_available">Выбранное время уже занято!</string>
+  <string name="error_empty_master">Мастер не выбран</string>
+  <string name="error_empty_service">Услуга не выбрана</string>
+  <string name="error_empty_date">Время не выбрано</string>
+  <string name="booking_date_and_time" translatable="false">%1$s в %2$s</string>
+  <string name="error_data_not_correct">Введенные данные не корректны.</string>
+  <string name="error_booking_entity_not_exist">Текущей записи не существует</string>
+  <string name="book_choose_specialist">Начать выбор специалиста</string>
+  <string name="book_choose_service">Начать выбор услуги</string>
+
+  <string name="booking_network_disconnect">Отсутствует интернет соединение</string>
+  <string name="booking_network_disconnect_message">Вы можете записаться, позвонив по следующим телефонам:</string>
+  <string name="booking_network_disconnect_phones"><u>+380441234455</u></string>
+
+  <string name="empty_name_error">Введите имя</string>
+  <string name="empty_phone_error">Введите корректно телефон</string>
+
+
+  <string name="spare_time">Свободное время на</string>
+  <string name="time_empty">Сведения о свободном времени отсутствуют</string>
+  <string name="time_empty_descr">Вы можете записаться, позвонив по телефону:</string>
+
+  <!--For tabs-->
+  <string name="tab_services">Выбор\nуслуги</string>
+  <string name="tab_time">Выбор\nвремени</string>
+  <string name="tab_master">Выбор\nмастера</string>
+  <string name="tab_data">Контактные\nданные</string>
+  <string name="booking_service">Услуга:</string>
+  <string name="booking_time">Время:</string>
+  <string name="booking_master">Мастер:</string>
+  <string name="booking_name">Ваше имя</string>
+  <string name="booking_name_description">(как к Вам обращаться)</string>
+  <string name="booking_phone">Номер мобильного телефона</string>
+  <string name="booking_phone_description" translatable="false">(формат +380501234455)</string>
+  <string name="booking_button">ЗАПИСАТЬСЯ</string>
+  <string name="name">Имя</string>
+  <string name="phone">Телефон</string>
+  <string name="choose_master">Выбор Специалиста</string>
+  <string name="search_service">Поиск услуги</string>
 
   <!-- Sales types -->
   <string-array name="sales_types" translatable="true">

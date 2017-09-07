@@ -36,7 +36,7 @@ public final class RxBusHelper {
   public static class SetNewsItemInMenu {
   }
 
-  public class UpdateLastBookingListEvent {
+  public static class UpdateLastBookingListEvent {
   }
 
   public static class UpdateFavoriteGoodsList {
@@ -69,5 +69,34 @@ public final class RxBusHelper {
   }
 
   public static class UpdateOurWorkList {
+  }
+
+  public static class EventForNextStep {
+    public String fragmentTag;
+
+    public EventForNextStep(String fragmentTag) {
+      this.fragmentTag = fragmentTag;
+    }
+  }
+
+  public static class StateBackBookingMaster {
+  }
+
+  public static class ShowAuthDialogBooking {
+  }
+
+  public static class BackCategories {
+  }
+
+  public static class CloseBookingService {
+  }
+
+  public static class StateBackBookingService {
+  }
+
+  public static class UpdateBonusFromParent {
+  }
+
+  public class UpdateBonusFromChildren {
   }
 }

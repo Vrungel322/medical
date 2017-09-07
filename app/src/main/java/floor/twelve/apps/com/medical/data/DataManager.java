@@ -3,21 +3,26 @@ package floor.twelve.apps.com.medical.data;
 import com.apps.twelve.floor.authorization.AuthorizationManager;
 import floor.twelve.apps.com.medical.data.local.DbHelper;
 import floor.twelve.apps.com.medical.data.local.PreferencesHelper;
+import floor.twelve.apps.com.medical.data.model.BonusEntity;
+import floor.twelve.apps.com.medical.data.model.BonusHistoryEntity;
+import floor.twelve.apps.com.medical.data.model.BookingServerEntity;
+import floor.twelve.apps.com.medical.data.model.CategoryEntity;
+import floor.twelve.apps.com.medical.data.model.DataServiceEntity;
 import floor.twelve.apps.com.medical.data.model.DoctorEntity;
+import floor.twelve.apps.com.medical.data.model.MasterEntity;
 import floor.twelve.apps.com.medical.data.model.NewsEntity;
 import floor.twelve.apps.com.medical.data.model.OurWorkEntity;
 import floor.twelve.apps.com.medical.data.model.PartnerEntity;
-import floor.twelve.apps.com.medical.data.model.PhotoWorksEntity;
-import floor.twelve.apps.com.medical.data.model.PriceEntity;
 import floor.twelve.apps.com.medical.data.model.PhotoGalleryEntity;
+import floor.twelve.apps.com.medical.data.model.PhotoWorksEntity;
 import floor.twelve.apps.com.medical.data.model.PriceEntity;
 import floor.twelve.apps.com.medical.data.model.PricesCategoryEntity;
 import floor.twelve.apps.com.medical.data.model.ResultEntity;
 import floor.twelve.apps.com.medical.data.model.ReviewEntity;
 import floor.twelve.apps.com.medical.data.model.SalesEntity;
+import floor.twelve.apps.com.medical.data.model.ServiceEntity;
 import floor.twelve.apps.com.medical.data.model.goods.GoodsEntity;
 import floor.twelve.apps.com.medical.data.model.goods.category.GoodsCategoryEntity;
-import floor.twelve.apps.com.medical.data.model.ServiceEntity;
 import floor.twelve.apps.com.medical.data.remote.LastBookingEntity;
 import floor.twelve.apps.com.medical.data.remote.OfferEntity;
 import floor.twelve.apps.com.medical.data.remote.RestApi;
@@ -27,6 +32,7 @@ import java.util.List;
 import retrofit2.Response;
 import rx.Observable;
 
+import static floor.twelve.apps.com.medical.data.local.PreferencesHelper.PREF_LAST_PHONE_FOR_BOOKING;
 import static floor.twelve.apps.com.medical.data.local.PreferencesHelper.PREF_NOTIF_DAILY_ENABLED;
 import static floor.twelve.apps.com.medical.data.local.PreferencesHelper.PREF_NOTIF_DAYS;
 import static floor.twelve.apps.com.medical.data.local.PreferencesHelper.PREF_NOTIF_HOURLY_ENABLED;
@@ -45,6 +51,7 @@ public class DataManager {
   private RestApi mRestApi;
   private PreferencesHelper mPref;
   private AuthorizationManager mAuthorizationManager;
+
 
   public DataManager(RestApi restApi, PreferencesHelper preferencesHelper,
       AuthorizationManager authorizationManager, DbHelper dbHelper) {
@@ -228,11 +235,11 @@ public class DataManager {
     List<LastBookingEntity> lastBookingEntities = new ArrayList<>();
     for (int i = 0; i < 4; i++) {
       lastBookingEntities.add(
-          new LastBookingEntity("МЕД. УСЛУГИ, ПЛАТНЫЕ" + i, "Маникюр, обновление" + i, "14:00 pm",
+          new LastBookingEntity("МЕД. УСЛУГИ, ПЛАТНЫЕ" + i, "Маникюр, обновление" + i, 140000000,
               "Профессиональная гигиена полости рта ультразвуком", "Партизанский проспект, 48-105",
               "Виктория Алейникова", "Ведущий специалист-стоматолог", 12,
               "http://www.doctorwho.tv/brand/assets/old-brand/img/profile-heros/twelfth-doctor.png",
-              1));
+              "new"));
     }
     return Observable.just(lastBookingEntities);
   }
@@ -440,5 +447,103 @@ public class DataManager {
         "Спасибо огромное очень внимательному врачу Андреевой Надежде Леонидовне!", "3", ""));
 
     return Observable.just(list);
+  }
+
+  //user
+
+  public String getLastPhoneForBooking() {
+    return mAuthorizationManager.getAdditionalField(PREF_LAST_PHONE_FOR_BOOKING,
+        mPref.getLastPhoneForBooking());
+  }
+
+  public void setLastPhoneForBooking(String lastPhone) {
+    mPref.setLastPhoneForBooking(lastPhone);
+  }
+
+  //checkin service.
+
+  public Observable<Response<List<CategoryEntity>>> fetchCategory() {
+    return mRestApi.fetchCategory(mPref.getLanguageCode());
+  }
+
+  public Observable<Response<List<ServiceEntity>>> fetchAllServices() {
+    return mRestApi.fetchAllServices(mPref.getLanguageCode());
+  }
+
+  public Observable<Response<List<ServiceEntity>>> fetchAllServicesByMasterId(String masterId) {
+    return mRestApi.fetchAllServicesByMasterId(mPref.getLanguageCode(), masterId);
+  }
+
+  public Observable<Response<List<ServiceEntity>>> fetchServicesOfCategoryWithId(int id) {
+    return mRestApi.fetchServicesOfCategoryWithId(mPref.getLanguageCode(), id);
+  }
+
+  public Observable<Response<List<CategoryEntity>>> fetchCategoriesOfCategoryWithId(int parentId) {
+    return mRestApi.fetchCategoriesOfCategoryWithId(mPref.getLanguageCode(), parentId);
+  }
+
+  public Observable<Response<List<DataServiceEntity>>> fetchDaysData(String serviceId) {
+    return mRestApi.fetchDaysData(mPref.getLanguageCode(), serviceId);
+  }
+
+  public Observable<Response<List<MasterEntity>>> fetchMasters(String serviceId, String dataID) {
+    return mRestApi.fetchMasters(mPref.getLanguageCode(), serviceId, dataID);
+  }
+
+  public Observable<Response<List<MasterEntity>>> fetchAllMasters() {
+    return mRestApi.fetchAllMasters(mPref.getLanguageCode());
+  }
+
+  public Observable<Response<List<DataServiceEntity>>> fetchDaysDataWithMasterId(String masterId) {
+    return mRestApi.fetchDaysDataWithMasterId(mPref.getLanguageCode(), masterId);
+  }
+
+  public Observable<retrofit2.Response<LastBookingEntity>> checkInService(
+      BookingServerEntity bookingServerEntity) {
+    return mRestApi.checkInService(mPref.getLanguageCode(), mAuthorizationManager.getToken(),
+        bookingServerEntity);
+  }
+
+  //main screen
+
+  public Observable<Response<List<LastBookingEntity>>> fetchLastBooking() {
+    return mRestApi.fetchLastBooking(mPref.getLanguageCode(), mAuthorizationManager.getToken());
+  }
+
+  public Observable<Response<List<LastBookingEntity>>> fetchLastBookingHistory() {
+    return mRestApi.fetchLastBookingHistory(mPref.getLanguageCode(),
+        mAuthorizationManager.getToken());
+  }
+
+  public Observable<retrofit2.Response<Void>> cancelOrder(Integer serviceId) {
+    return mRestApi.cancelOrder(mPref.getLanguageCode(), serviceId,
+        mAuthorizationManager.getToken());
+  }
+
+  public Observable<Response<Void>> postponeService(String entryId, int scheduleId) {
+    return mRestApi.postponeService(mPref.getLanguageCode(), entryId,
+        mAuthorizationManager.getToken(), scheduleId);
+  }
+
+  //bonus
+
+  public Observable<Response<BonusEntity>> fetchBonusCount() {
+    return mRestApi.fetchBonusCount(mPref.getLanguageCode(), mAuthorizationManager.getToken());
+  }
+
+  public Observable<Response<List<BonusHistoryEntity>>> fetchBonusHistory() {
+    return mRestApi.fetchBonusHistory(mPref.getLanguageCode(), mAuthorizationManager.getToken());
+  }
+
+  public void setBonusCount(int bonusCount) {
+    mPref.setBonusCount(bonusCount);
+  }
+
+  public int getBonusCountInt() {
+    return mPref.getBonusCountInt();
+  }
+
+  public Observable<Integer> getBonusCountObservable() {
+    return mPref.getBonusCountObservable();
   }
 }

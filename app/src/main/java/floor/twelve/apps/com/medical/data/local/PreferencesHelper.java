@@ -2,7 +2,7 @@ package floor.twelve.apps.com.medical.data.local;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
+import rx.Observable;
 
 /**
  * Created by Alexandra on 05.07.2017.
@@ -16,6 +16,9 @@ public class PreferencesHelper {
   public static final String PREF_LANGUAGE = "PREF_LANGUAGE";
   public static final String PREF_LANGUAGE_CODE = "PREF_LANGUAGE_CODE";
 
+  public static final String PREF_BONUS_COUNT = "PREF_BONUS_COUNT";
+
+
   //notifications
   public static final String PREF_NOTIF_HOURLY_ENABLED = "PREF_NOTIF_HOURLY_ENABLED";
   public static final String PREF_NOTIF_DAILY_ENABLED = "PREF_NOTIF_DAILY_ENABLED";
@@ -24,6 +27,7 @@ public class PreferencesHelper {
   public static final String PREF_NOTIF_HOURS_NIGHT_END = "PREF_NOTIF_HOURS_NIGHT_END";
   public static final String PREF_NOTIF_DAYS = "PREF_NOTIF_DAYS";
   public static final String PREF_NOTIF_NIGHT_MODE = "PREF_NOTIF_NIGHT_MODE";
+  public static final String PREF_LAST_PHONE_FOR_BOOKING = "PREF_LAST_PHONE_FOR_BOOKING";
 
   private final SharedPreferences mPreferences;
 
@@ -121,5 +125,33 @@ public class PreferencesHelper {
 
   public String getLanguageCode() {
     return mPreferences.getString(PREF_LANGUAGE_CODE, "ru");
+  }
+
+  ///////////////////////////////////////////////////////////////////////////
+  // Phone
+  ///////////////////////////////////////////////////////////////////////////
+
+  public String getLastPhoneForBooking() {
+    return mPreferences.getString(PREF_LAST_PHONE_FOR_BOOKING, "");
+  }
+
+  public void setLastPhoneForBooking(String lastPhone) {
+    mPreferences.edit().putString(PREF_LAST_PHONE_FOR_BOOKING, lastPhone).apply();
+  }
+
+  ///////////////////////////////////////////////////////////////////////////
+  // Bonus
+  ///////////////////////////////////////////////////////////////////////////
+
+  public int getBonusCountInt() {
+    return mPreferences.getInt(PREF_BONUS_COUNT, 0);
+  }
+
+  public Observable<Integer> getBonusCountObservable() {
+    return Observable.just(mPreferences.getInt(PREF_BONUS_COUNT, 0));
+  }
+
+  public void setBonusCount(int bonusCount) {
+    mPreferences.edit().putInt(PREF_BONUS_COUNT, bonusCount).apply();
   }
 }
