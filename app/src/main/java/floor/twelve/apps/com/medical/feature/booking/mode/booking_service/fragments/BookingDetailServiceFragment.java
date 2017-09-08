@@ -96,11 +96,17 @@ public class BookingDetailServiceFragment extends BaseFragment
             Constants.FragmentTag.CHOOSE_SERVICE_SERVICE_FRAGMENT);
         break;
       case Constants.FragmentTag.CHOOSE_SERVICE_TIME_FRAGMENT:
+        //// TODO: 8/09/17 replace it after test
+        //mNavigator.addFragmentTagBackStackNotCopy((AppCompatActivity) getActivity(),
+        //    R.id.container_booking_detail_service, ChooseServiceTimeFragment.newInstance(),
+        //    Constants.FragmentTag.CHOOSE_SERVICE_TIME_FRAGMENT);
+        //mBookingDetailServiceFragmentPresenter.setSelectedTab(
+        //    Constants.FragmentTag.CHOOSE_SERVICE_TIME_FRAGMENT);
         mNavigator.addFragmentTagBackStackNotCopy((AppCompatActivity) getActivity(),
-            R.id.container_booking_detail_service, ChooseServiceTimeFragment.newInstance(),
-            Constants.FragmentTag.CHOOSE_SERVICE_TIME_FRAGMENT);
+            R.id.container_booking_detail_service, ChooseServiceMasterFragment.newInstance(),
+            Constants.FragmentTag.CHOOSE_SERVICE_MASTER_FRAGMENT);
         mBookingDetailServiceFragmentPresenter.setSelectedTab(
-            Constants.FragmentTag.CHOOSE_SERVICE_TIME_FRAGMENT);
+            Constants.FragmentTag.CHOOSE_SERVICE_MASTER_FRAGMENT);
         break;
       case Constants.FragmentTag.CHOOSE_SERVICE_MASTER_FRAGMENT:
         mNavigator.addFragmentTagBackStackNotCopy((AppCompatActivity) getActivity(),

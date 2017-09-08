@@ -15,7 +15,6 @@ import floor.twelve.apps.com.medical.data.model.MasterEntity;
 import floor.twelve.apps.com.medical.feature.booking.mode.adapters.MastersVerticalAdapter;
 import floor.twelve.apps.com.medical.feature.booking.mode.booking_service.presenters.ChooseServiceMasterFragmentPresenter;
 import floor.twelve.apps.com.medical.feature.booking.mode.booking_service.views.IChooseServiceMasterFragmentView;
-import floor.twelve.apps.com.medical.utils.ItemClickSupport;
 import floor.twelve.apps.com.medical.utils.ViewUtil;
 import java.util.List;
 
@@ -56,18 +55,18 @@ public class ChooseServiceMasterFragment extends BaseFragment
     mRecyclerViewMasters.setAdapter(mMastersVerticalAdapter);
     mRecyclerViewMasters.setNestedScrollingEnabled(false);
     mRecyclerViewMasters.setFocusable(false);
-    ItemClickSupport.addTo(mRecyclerViewMasters)
-        .setOnItemClickListener((recyclerView, position, v) -> {
-          if (position == 0) {
-            mChooseServiceMasterFragmentPresenter.setAnyMasterSelected();
-          } else {
-            mChooseServiceMasterFragmentPresenter.setSelectedItem(position - 1);
-          }
-        });
+    //ItemClickSupport.addTo(mRecyclerViewMasters)
+    //    .setOnItemClickListener((recyclerView, position, v) -> {
+    //      if (position == 0) {
+    //        mChooseServiceMasterFragmentPresenter.setAnyMasterSelected();
+    //      } else {
+    //        mChooseServiceMasterFragmentPresenter.setSelectedItem(position - 1);
+    //      }
+    //    });
   }
 
-  @Override public void showMasters(List<MasterEntity> masterEntities) {
-    mMastersVerticalAdapter.addListMasterEntity(masterEntities);
+  @Override public void showMasters(List<MasterEntity> list) {
+    mMastersVerticalAdapter.addListMasterEntity(list);
   }
 
   @Override public void hideProgressBar() {
@@ -87,8 +86,8 @@ public class ChooseServiceMasterFragment extends BaseFragment
   }
 
   @Override public void setSelectedItem(String masterId) {
-    if (!masterId.isEmpty()) {
-      mMastersVerticalAdapter.setSelectedItem(masterId);
-    }
+    //if (!masterId.isEmpty()) {
+    //  mMastersVerticalAdapter.setSelectedItem(masterId);
+    //}
   }
 }

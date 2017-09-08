@@ -8,16 +8,11 @@ import floor.twelve.apps.com.medical.data.model.BookingEntity;
 import floor.twelve.apps.com.medical.data.model.MasterEntity;
 import floor.twelve.apps.com.medical.feature.booking.mode.booking_service.views.IChooseServiceMasterFragmentView;
 import floor.twelve.apps.com.medical.utils.Constants;
-import floor.twelve.apps.com.medical.utils.Converters;
 import floor.twelve.apps.com.medical.utils.Randomizer;
 import floor.twelve.apps.com.medical.utils.RxBusHelper;
-import floor.twelve.apps.com.medical.utils.ThreadSchedulers;
 import java.util.List;
 import javax.inject.Inject;
 import rx.Subscription;
-import timber.log.Timber;
-
-import static floor.twelve.apps.com.medical.utils.Constants.StatusCode.RESPONSE_200;
 
 /**
  * Created by Vrungel on 28.03.2017.
@@ -36,29 +31,39 @@ import static floor.twelve.apps.com.medical.utils.Constants.StatusCode.RESPONSE_
   @Override protected void onFirstViewAttach() {
     super.onFirstViewAttach();
     getViewState().setUpUi();
-    fetchMasters();
+    fetchDoctors();
   }
 
-  private void fetchMasters() {
-    Subscription subscription =
-        mDataManager.fetchMasters(mBookingEntity.getServiceId(), mBookingEntity.getDateId())
-            .compose(ThreadSchedulers.applySchedulers())
-            .subscribe(response -> {
-              if (response.code() == RESPONSE_200) {
-                mMasterEntities = response.body();
-                getViewState().setUpRedSquare(mBookingEntity.getServiceName(),
-                    mContext.getString(R.string.booking_date_and_time,
-                        Converters.detailDayFromSeconds(mContext,
-                            mBookingEntity.getRemainTimeInSec()), mBookingEntity.getServiceTime()),
-                    mBookingEntity.getDurationServices());
-                getViewState().showMasters(response.body());
-                getViewState().setSelectedItem(mBookingEntity.getMasterId());
-                getViewState().hideProgressBar();
-              }
-            }, throwable -> {
-              Timber.e(throwable);
-              showMessageException(throwable);
-            });
+  private void fetchDoctors() {
+    // TODO: 8/09/17 for tests
+    //Subscription subscription =
+    //    mDataManager.fetchMasters(mBookingEntity.getServiceId(), mBookingEntity.getDateId())
+    //        .compose(ThreadSchedulers.applySchedulers())
+    //        .subscribe(response -> {
+    //          if (response.code() == RESPONSE_200) {
+    //            mMasterEntities = response.body();
+    //            getViewState().setUpRedSquare(mBookingEntity.getServiceName(),
+    //                mContext.getString(R.string.booking_date_and_time,
+    //                    Converters.detailDayFromSeconds(mContext,
+    //                        mBookingEntity.getRemainTimeInSec()), mBookingEntity.getServiceTime()),
+    //                mBookingEntity.getDurationServices());
+    //            getViewState().showMasters(response.body());
+    //            getViewState().setSelectedItem(mBookingEntity.getMasterId());
+    //            getViewState().hideProgressBar();
+    //          }
+    //        }, throwable -> {
+    //          Timber.e(throwable);
+    //          showMessageException(throwable);
+    //        });
+
+    // TODO: 7/09/17 test data
+    Subscription subscription = mDataManager.fetchMasterForTest()
+        .compose(com.apps.twelve.floor.authorization.utils.ThreadSchedulers.applySchedulers())
+        .subscribe(list -> {
+          getViewState().setUpRedSquare("Наращивание носа", "30 июня 2017", "100 мин");
+          getViewState().showMasters(list);
+          getViewState().hideProgressBar();
+        });
     addToUnsubscription(subscription);
   }
 

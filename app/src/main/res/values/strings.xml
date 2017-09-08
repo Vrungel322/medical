@@ -146,11 +146,11 @@
   <!--For tabs-->
   <string name="tab_services">Выбор\nуслуги</string>
   <string name="tab_time">Выбор\nвремени</string>
-  <string name="tab_master">Выбор\nмастера</string>
+  <string name="tab_master">Выбор\nврача</string>
   <string name="tab_data">Контактные\nданные</string>
   <string name="booking_service">Услуга:</string>
   <string name="booking_time">Время:</string>
-  <string name="booking_master">Мастер:</string>
+  <string name="booking_master">Врач:</string>
   <string name="booking_name">Ваше имя</string>
   <string name="booking_name_description">(как к Вам обращаться)</string>
   <string name="booking_phone">Номер мобильного телефона</string>

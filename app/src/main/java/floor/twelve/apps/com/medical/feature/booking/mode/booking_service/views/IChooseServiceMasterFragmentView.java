@@ -16,6 +16,8 @@ import java.util.List;
 
   void showMasters(List<MasterEntity> masterEntities);
 
+  //void showDoctors(List<DoctorEntity> list);
+
   void hideProgressBar();
 
   void setSelectedItem(int position);

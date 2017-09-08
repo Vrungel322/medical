@@ -449,6 +449,18 @@ public class DataManager {
     return Observable.just(list);
   }
 
+  public Observable<List<MasterEntity>> fetchMasterForTest() {
+    ArrayList<MasterEntity> list = new ArrayList<>();
+
+    list.add(new MasterEntity("1", "Василий Петровчи", "", "Массажист", "male", 3));
+    list.add(new MasterEntity("1", "Василий Петровчи", "", "Массажист", "male", 3));
+    list.add(new MasterEntity("1", "Василий Петровчи", "", "Массажист", "male", 3));
+    list.add(new MasterEntity("1", "Василий Петровчи", "", "Массажист", "male", 3));
+    list.add(new MasterEntity("1", "Василий Петровчи", "", "Массажист", "male", 3));
+
+    return Observable.just(list);
+  }
+
   //user
 
   public String getLastPhoneForBooking() {
